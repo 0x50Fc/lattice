@@ -59,6 +59,10 @@
 		1181E748187FA7DA004C4425 /* LAContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1181E746187FA7DA004C4425 /* LAContainerViewController.xib */; };
 		8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */; };
 		8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEE31880148800DB0F05 /* LAHomeDataSource.m */; };
+		84E097CC188021CD00101048 /* LABeaconListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E097C9188021CD00101048 /* LABeaconListViewController.xib */; };
+		84E097CD188021CD00101048 /* LABeaconListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E097CA188021CD00101048 /* LABeaconListViewController.m */; };
+		84E097D1188021D500101048 /* LABeaconDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E097CF188021D500101048 /* LABeaconDataController.m */; };
+		84E097D4188021DA00101048 /* LABeaconDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E097D2188021DA00101048 /* LABeaconDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +145,13 @@
 		8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataController.m; path = Lattice/LAHomeDataController.m; sourceTree = SOURCE_ROOT; };
 		8457FEE21880148800DB0F05 /* LAHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataSource.h; path = Lattice/LAHomeDataSource.h; sourceTree = SOURCE_ROOT; };
 		8457FEE31880148800DB0F05 /* LAHomeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataSource.m; path = Lattice/LAHomeDataSource.m; sourceTree = SOURCE_ROOT; };
+		84E097C9188021CD00101048 /* LABeaconListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LABeaconListViewController.xib; sourceTree = "<group>"; };
+		84E097CA188021CD00101048 /* LABeaconListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABeaconListViewController.m; sourceTree = "<group>"; };
+		84E097CB188021CD00101048 /* LABeaconListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABeaconListViewController.h; sourceTree = "<group>"; };
+		84E097CF188021D500101048 /* LABeaconDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABeaconDataController.m; sourceTree = "<group>"; };
+		84E097D0188021D500101048 /* LABeaconDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABeaconDataController.h; sourceTree = "<group>"; };
+		84E097D2188021DA00101048 /* LABeaconDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABeaconDataSource.m; sourceTree = "<group>"; };
+		84E097D3188021DA00101048 /* LABeaconDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABeaconDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +275,8 @@
 		1181E6F2187F9663004C4425 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				84E097D2188021DA00101048 /* LABeaconDataSource.m */,
+				84E097D3188021DA00101048 /* LABeaconDataSource.h */,
 				8457FEE21880148800DB0F05 /* LAHomeDataSource.h */,
 				8457FEE31880148800DB0F05 /* LAHomeDataSource.m */,
 				113F9E6C187FE36D00E6948C /* LAURLDataSource.h */,
@@ -275,6 +288,8 @@
 		1181E6F4187F9663004C4425 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84E097CF188021D500101048 /* LABeaconDataController.m */,
+				84E097D0188021D500101048 /* LABeaconDataController.h */,
 				8457FEDE1880146C00DB0F05 /* LAHomeDataController.h */,
 				8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */,
 				113F9E6F187FE38B00E6948C /* LAContainerDataController.h */,
@@ -292,6 +307,9 @@
 		1181E6F6187F9663004C4425 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84E097C9188021CD00101048 /* LABeaconListViewController.xib */,
+				84E097CA188021CD00101048 /* LABeaconListViewController.m */,
+				84E097CB188021CD00101048 /* LABeaconListViewController.h */,
 				1181E6F8187F9663004C4425 /* LAViewController.h */,
 				1181E6F9187F9663004C4425 /* LAViewController.m */,
 				1181E723187F97B1004C4425 /* LAHomeViewController.h */,
@@ -447,6 +465,7 @@
 				1181E6F3187F9663004C4425 /* DataSource in Resources */,
 				113F9EAD1880209500E6948C /* LAHomeItemCellController.xib in Resources */,
 				1181E6EA187F9663004C4425 /* InfoPlist.strings in Resources */,
+				84E097CC188021CD00101048 /* LABeaconListViewController.xib in Resources */,
 				1181E722187F977F004C4425 /* Default-568h@2x.png in Resources */,
 				1181E6F7187F9663004C4425 /* ViewController in Resources */,
 				113F9E951880077700E6948C /* ico_close.png in Resources */,
@@ -478,8 +497,11 @@
 				1181E739187FA1E7004C4425 /* NSError+LA.m in Sources */,
 				113F9E7B187FEDD800E6948C /* LAListContainerDataController.m in Sources */,
 				1181E704187F9663004C4425 /* LAShell.m in Sources */,
+				84E097CD188021CD00101048 /* LABeaconListViewController.m in Sources */,
 				8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */,
+				84E097D4188021DA00101048 /* LABeaconDataSource.m in Sources */,
 				1181E735187F9BB6004C4425 /* LALatticePullTask.m in Sources */,
+				84E097D1188021D500101048 /* LABeaconDataController.m in Sources */,
 				1181E726187F97B1004C4425 /* LAHomeViewController.m in Sources */,
 				1181E73D187FA743004C4425 /* LAHTMLViewController.m in Sources */,
 				113F9E9918800BC200E6948C /* LABoardContainerDataController.m in Sources */,
