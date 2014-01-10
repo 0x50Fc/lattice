@@ -3,10 +3,10 @@
 	"version":"1.0.0",
 	"uri":"container",
 	"containerType":"list",
-	"html":"image_sogou.html",
+	"html":"image.html",
 	"dataUrl":"http://wap.sogou.com/pic/json/searchlist_json.jsp?keyword=%E5%AE%A0%E7%89%A9&p={pageIndex}&pgs={pageSize}",
 	"dataKey":"items",
-	"dataWidthKey":"width",
-	"dataHeightKey":"height"
+	"dataWidthKey":"pic_width",
+	"dataHeightKey":"pic_height"
 	"title":"宠物选图"
 }

@@ -104,6 +104,8 @@
 		<dict>
 			<key>class</key>
 			<string>VTNavigationController</string>
+			<key>scheme</key>
+			<string>root</string>
 		</dict>
 		<key>home</key>
 		<dict>
@@ -144,7 +146,7 @@
 		</dict>
 	</dict>
 	<key>url</key>
-	<string>nav:///root/home</string>
+	<string>root:///root/home</string>
 	<key>app-db</key>
 	<array>
 		<string>LADBLatticeObject</string>

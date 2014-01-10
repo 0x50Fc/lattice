@@ -14,6 +14,8 @@
 		113F9E88187FF6DB00E6948C /* LAFallsContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E87187FF6DA00E6948C /* LAFallsContainerDataController.m */; };
 		113F9E8F1880034700E6948C /* LABrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E8D1880034700E6948C /* LABrowserViewController.m */; };
 		113F9E901880034700E6948C /* LABrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E8E1880034700E6948C /* LABrowserViewController.xib */; };
+		113F9E951880077700E6948C /* ico_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E931880077700E6948C /* ico_close.png */; };
+		113F9E961880077700E6948C /* ico_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E941880077700E6948C /* ico_close@2x.png */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -76,6 +78,8 @@
 		113F9E8C1880034700E6948C /* LABrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABrowserViewController.h; sourceTree = "<group>"; };
 		113F9E8D1880034700E6948C /* LABrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABrowserViewController.m; sourceTree = "<group>"; };
 		113F9E8E1880034700E6948C /* LABrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LABrowserViewController.xib; sourceTree = "<group>"; };
+		113F9E931880077700E6948C /* ico_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_close.png; sourceTree = "<group>"; };
+		113F9E941880077700E6948C /* ico_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_close@2x.png"; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -299,6 +303,8 @@
 		1181E6FF187F9663004C4425 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				113F9E931880077700E6948C /* ico_close.png */,
+				113F9E941880077700E6948C /* ico_close@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -408,12 +414,14 @@
 				113F9E901880034700E6948C /* LABrowserViewController.xib in Resources */,
 				1181E6FE187F9663004C4425 /* LAThemeDefault.xib in Resources */,
 				1181E73E187FA743004C4425 /* LAHTMLViewController.xib in Resources */,
+				113F9E961880077700E6948C /* ico_close@2x.png in Resources */,
 				1181E6FC187F9663004C4425 /* Theme in Resources */,
 				1181E6F1187F9663004C4425 /* Services in Resources */,
 				1181E6F3187F9663004C4425 /* DataSource in Resources */,
 				1181E6EA187F9663004C4425 /* InfoPlist.strings in Resources */,
 				1181E722187F977F004C4425 /* Default-568h@2x.png in Resources */,
 				1181E6F7187F9663004C4425 /* ViewController in Resources */,
+				113F9E951880077700E6948C /* ico_close.png in Resources */,
 				1181E708187F9663004C4425 /* LAMain.xib in Resources */,
 				1181E743187FA753004C4425 /* LAWebViewController.xib in Resources */,
 				1181E700187F9663004C4425 /* Resource in Resources */,
