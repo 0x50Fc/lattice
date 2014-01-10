@@ -49,6 +49,9 @@
         
         VTBarButtonItem * buttonItem = [[VTBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ico_setting.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(doAction:)];
         
+        [buttonItem setActionName:@"url"];
+        [buttonItem setUserInfo:[NSString stringWithFormat:@"%@/setting",self.alias]];
+        
         self.navigationItem.rightBarButtonItem = buttonItem;
         
     }

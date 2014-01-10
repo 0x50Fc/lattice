@@ -140,6 +140,16 @@
         }
         
     }
+    else if([[element name] isEqualToString:@"a"]){
+        
+        NSString * href = [element stringValueForKey:@"href"];
+        
+        if(href){
+            
+             [self openUrl:[NSURL URLWithString:@"present://root/browser" relativeToURL:self.url queryValues:[NSDictionary dictionaryWithObjectsAndKeys:href,@"url", nil]] animated:YES];
+            
+        }
+    }
 }
 
 @end

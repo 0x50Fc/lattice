@@ -161,6 +161,15 @@
 			<key>view</key>
 			<string>LADocumentViewController</string>
 		</dict>
+		<key>setting</key>
+		<dict>
+			<key>class</key>
+			<string>LASettingViewController</string>
+			<key>view</key>
+			<string>LASettingViewController</string>
+			<key>title</key>
+			<string>设置</string>
+		</dict>
 	</dict>
 	<key>url</key>
 	<string>root:///root/home</string>
