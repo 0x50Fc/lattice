@@ -1,0 +1,9 @@
+
+{
+	"version":"1.0.0",
+	"uri":"container",
+	"containerType":"falls",
+	"html":"meilishuo.html",
+	"dataUrl":"http://www.meilishuo.com/aj/getGoods/goods?frame={pageIndex}&page={pageSize}&view=1&word_name=hot&section=hot&price=all",
+	"title":"美丽说"
+}

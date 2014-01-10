@@ -78,6 +78,16 @@
 		</dict>
 		<dict>
 			<key>class</key>
+			<string>VTURLService</string>
+			<key>taskTypes</key>
+			<array>
+				<string>IVTURLDownlinkTask</string>
+			</array>
+			<key>timeout</key>
+			<integer>20</integer>
+		</dict>
+		<dict>
+			<key>class</key>
 			<string>LALatticeService</string>
 			<key>taskTypes</key>
 			<array>

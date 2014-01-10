@@ -57,10 +57,13 @@
     
     if([containerType isEqualToString:@"falls"]){
         
+        self.dataController = self.fallsController;
     }
     else {
         self.dataController = self.listController;
     }
+    
+    [_containerView setDelegate:self.dataController];
     
     NSURL * baseURL = [NSURL URLWithString:dataObject.url];
     
@@ -78,9 +81,7 @@
     if([[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:nil]){
         
         self.htmlLoaded = YES;
-        
-        
-        
+
     }
     else{
         
@@ -95,6 +96,9 @@
         [self.context handle:@protocol(IVTHttpResourceTask) task:httpTask priority:0];
         
     }
+ 
+    [self.dataController.dataSource setValue:[dataObject.infoObject stringValueForKey:@"dataUrl"] forKey:@"url"];
+    [self.dataController.dataSource setValue:[dataObject.infoObject stringValueForKey:@"dataKey"] forKey:@"dataKey"];
     
 }
 

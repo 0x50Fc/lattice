@@ -5,6 +5,5 @@
 	"containerType":"falls",
 	"html":"meilishuo.html",
 	"dataUrl":"http://m.meilishuo.com/aj/getGoods/hot?frame={pageIndex}&page={pageSize}&view=1&word_name=hot&section=hot&price=all",
-	"dataKey":"tInfo",
 	"title":"美丽说"
 }

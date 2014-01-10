@@ -37,7 +37,7 @@
 
 - (IBAction)testAction:(id)sender {
     
-    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/app.json"];
+    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/meilishuo.json"];
     
 }
 
