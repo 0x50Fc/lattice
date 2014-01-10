@@ -16,6 +16,7 @@
 		113F9E901880034700E6948C /* LABrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E8E1880034700E6948C /* LABrowserViewController.xib */; };
 		113F9E951880077700E6948C /* ico_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E931880077700E6948C /* ico_close.png */; };
 		113F9E961880077700E6948C /* ico_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E941880077700E6948C /* ico_close@2x.png */; };
+		113F9E9918800BC200E6948C /* LABoardContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E9818800BC200E6948C /* LABoardContainerDataController.m */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -80,6 +81,8 @@
 		113F9E8E1880034700E6948C /* LABrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LABrowserViewController.xib; sourceTree = "<group>"; };
 		113F9E931880077700E6948C /* ico_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_close.png; sourceTree = "<group>"; };
 		113F9E941880077700E6948C /* ico_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_close@2x.png"; sourceTree = "<group>"; };
+		113F9E9718800BC200E6948C /* LABoardContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABoardContainerDataController.h; sourceTree = "<group>"; };
+		113F9E9818800BC200E6948C /* LABoardContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABoardContainerDataController.m; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -263,6 +266,8 @@
 				113F9E7A187FEDD800E6948C /* LAListContainerDataController.m */,
 				113F9E86187FF6DA00E6948C /* LAFallsContainerDataController.h */,
 				113F9E87187FF6DA00E6948C /* LAFallsContainerDataController.m */,
+				113F9E9718800BC200E6948C /* LABoardContainerDataController.h */,
+				113F9E9818800BC200E6948C /* LABoardContainerDataController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				1181E735187F9BB6004C4425 /* LALatticePullTask.m in Sources */,
 				1181E726187F97B1004C4425 /* LAHomeViewController.m in Sources */,
 				1181E73D187FA743004C4425 /* LAHTMLViewController.m in Sources */,
+				113F9E9918800BC200E6948C /* LABoardContainerDataController.m in Sources */,
 				113F9E88187FF6DB00E6948C /* LAFallsContainerDataController.m in Sources */,
 				1181E72F187F991B004C4425 /* LADBLatticeObject.m in Sources */,
 				1181E747187FA7DA004C4425 /* LAContainerViewController.m in Sources */,

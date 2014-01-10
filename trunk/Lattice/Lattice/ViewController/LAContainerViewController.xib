@@ -7,12 +7,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LAContainerViewController">
             <connections>
+                <outlet property="boardController" destination="m1V-KK-buR" id="v8p-4q-yNp"/>
                 <outlet property="containerView" destination="0E9-od-NIm" id="pyk-ym-3N3"/>
                 <outlet property="fallsController" destination="bTa-Wu-qW3" id="3Jc-MT-cQc"/>
                 <outlet property="listController" destination="7Xz-R0-EIU" id="byO-Oq-9fN"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outletCollection property="controllers" destination="7Xz-R0-EIU" id="ia9-6I-WJG"/>
                 <outletCollection property="controllers" destination="bTa-Wu-qW3" id="o72-Rs-4ff"/>
+                <outletCollection property="controllers" destination="m1V-KK-buR" id="1dN-Qu-U8Q"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -92,6 +94,29 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="delegate" destination="bTa-Wu-qW3" id="g5k-7B-WsP"/>
+            </connections>
+        </customObject>
+        <customObject id="m1V-KK-buR" customClass="LABoardContainerDataController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bottomLoadingView" destination="gDq-uE-QiP" id="gUB-eC-lQQ"/>
+                <outlet property="containerLayout" destination="Buk-ef-1RA" id="haN-Dh-HHe"/>
+                <outlet property="containerView" destination="0E9-od-NIm" id="sHo-aG-5X2"/>
+                <outlet property="dataSource" destination="goF-Ek-kfX" id="4G3-kV-5eT"/>
+                <outlet property="delegate" destination="-1" id="IpC-SY-wii"/>
+                <outlet property="topLoadingView" destination="qpA-uw-g9i" id="43w-WV-97f"/>
+            </connections>
+        </customObject>
+        <customObject id="Buk-ef-1RA" customClass="VTFlowContainerLayout">
+            <connections>
+                <outlet property="delegate" destination="m1V-KK-buR" id="24s-bY-QEB"/>
+            </connections>
+        </customObject>
+        <customObject id="goF-Ek-kfX" customClass="LAURLDataSource">
+            <connections>
+                <outlet property="delegate" destination="m1V-KK-buR" id="feu-5S-XTr"/>
             </connections>
         </customObject>
         <view contentMode="scaleToFill" id="gDq-uE-QiP" userLabel="bottom loading" customClass="VTDragLoadingView">

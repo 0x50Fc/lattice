@@ -59,6 +59,10 @@
         
         self.dataController = self.fallsController;
     }
+    else if([containerType isEqualToString:@"board"]){
+        
+        self.dataController = self.boardController;
+    }
     else {
         self.dataController = self.listController;
     }

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet LAContainerDataController *listController;
 @property (strong, nonatomic) IBOutlet LAContainerDataController *fallsController;
+@property (strong, nonatomic) IBOutlet LAContainerDataController *boardController;
 @property (strong, nonatomic) IBOutlet VTContainerView *containerView;
 
 
