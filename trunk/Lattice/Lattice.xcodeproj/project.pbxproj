@@ -47,18 +47,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1181E712187F9673004C4425 /* PBXContainerItemProxy */ = {
+		113F9E60187FCD7000E6948C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1181E70E187F9672004C4425 /* vTeam.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 114772F41727DE5200196FB2;
-			remoteInfo = vTeam;
-		};
-		1181E714187F96B1004C4425 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1181E70E187F9672004C4425 /* vTeam.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 114772F31727DE5200196FB2;
 			remoteInfo = vTeam;
 		};
 /* End PBXContainerItemProxy section */
@@ -82,7 +75,7 @@
 		1181E703187F9663004C4425 /* LAShell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAShell.m; sourceTree = "<group>"; };
 		1181E705187F9663004C4425 /* cfg.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = cfg.plist; sourceTree = "<group>"; };
 		1181E707187F9663004C4425 /* LAMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LAMain.xib; sourceTree = "<group>"; };
-		1181E70E187F9672004C4425 /* vTeam.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vTeam.xcodeproj; path = ../../../../../github/vTeam/vTeam/vTeam.xcodeproj; sourceTree = "<group>"; };
+		1181E70E187F9672004C4425 /* vTeam.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vTeam.xcodeproj; path = ../../../vTeam/vTeam/vTeam.xcodeproj; sourceTree = "<group>"; };
 		1181E716187F96BA004C4425 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1181E718187F96C0004C4425 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1181E71A187F96C6004C4425 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -132,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113F9E5D187FCD7000E6948C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				113F9E61187FCD7000E6948C /* vTeam.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1181E6CF187F9662004C4425 = {
 			isa = PBXGroup;
 			children = (
@@ -271,14 +272,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		1181E70F187F9672004C4425 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1181E713187F9673004C4425 /* vTeam.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1181E72A187F989E004C4425 /* Htmls */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +318,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1181E715187F96B1004C4425 /* PBXTargetDependency */,
 			);
 			name = Lattice;
 			productName = Lattice;
@@ -354,7 +346,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1181E70F187F9672004C4425 /* Products */;
+					ProductGroup = 113F9E5D187FCD7000E6948C /* Products */;
 					ProjectRef = 1181E70E187F9672004C4425 /* vTeam.xcodeproj */;
 				},
 			);
@@ -366,11 +358,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1181E713187F9673004C4425 /* vTeam.framework */ = {
+		113F9E61187FCD7000E6948C /* vTeam.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = vTeam.framework;
-			remoteRef = 1181E712187F9673004C4425 /* PBXContainerItemProxy */;
+			remoteRef = 113F9E60187FCD7000E6948C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -421,14 +413,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1181E715187F96B1004C4425 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = vTeam;
-			targetProxy = 1181E714187F96B1004C4425 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1181E6E8187F9663004C4425 /* InfoPlist.strings */ = {
@@ -563,6 +547,7 @@
 				1181E70D187F9663004C4425 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
