@@ -23,6 +23,8 @@
             
             document = [[VTDOMDocument alloc] init];
             
+            document.documentURL = self.documentURL;
+            
             VTDOMParse * parse = [[VTDOMParse alloc] init];
             
             [parse parseHTML:[self htmlContentByIndexPath:indexPath] toDocument:document];
