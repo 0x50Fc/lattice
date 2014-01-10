@@ -27,7 +27,7 @@ require_once "$library/org.hailong.authority/authority.php";
 require_once "$library/org.hailong.service.async/async.php";
 require_once "$library/com.9vteam.lattice/lattice.php";
 
-function config_lattice(){
+function config_qdd(){
 	
 	global $library;
 	
