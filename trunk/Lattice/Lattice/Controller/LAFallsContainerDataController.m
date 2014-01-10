@@ -13,8 +13,26 @@
 -(CGSize) vtContainerLayout:(VTContainerLayout *)containerLayout itemSizeAtIndex:(NSInteger)index{
     
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+
+    id widthKey = [self.infoObject objectValueForKey:@"dataWidthKey"];
+    id heightKey = [self.infoObject objectValueForKey:@"dataHeightKey"];
     
-    VTDOMDocument * document = [self documentByIndexPath:indexPath layoutSize:CGSizeMake([(VTFallsContainerLayout *)containerLayout columnWidth], MAXFLOAT)];
+    CGSize layoutSize = CGSizeMake([(VTFallsContainerLayout *)containerLayout columnWidth], MAXFLOAT);
+    
+    if(widthKey && heightKey){
+        
+        id dataItem = [self dataObjectByIndexPath:indexPath];
+        
+        double width = [dataItem doubleValueForKeyPath:@"widthKey"];
+        double height = [dataItem doubleValueForKeyPath:@"heightKey"];
+        
+        if(width && height){
+            layoutSize.height = layoutSize.width * height / width;
+        }
+        
+    }
+   
+    VTDOMDocument * document = [self documentByIndexPath:indexPath layoutSize:layoutSize];
     
     return [[document rootElement] frame].size;
 }

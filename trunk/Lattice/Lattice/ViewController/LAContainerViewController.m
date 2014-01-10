@@ -75,6 +75,7 @@
     
     NSString * filePath = [self documentFilePath];
     
+    self.dataController.infoObject = dataObject.infoObject;
     self.dataController.bundle = [NSBundle bundleWithPath:[filePath stringByDeletingLastPathComponent]];
     self.dataController.html = [dataObject.infoObject stringValueForKey:@"html"];
     
