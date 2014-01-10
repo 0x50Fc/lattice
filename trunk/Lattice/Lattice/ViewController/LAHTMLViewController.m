@@ -34,9 +34,24 @@
     
     self.title = dataObject.title;
     
+    NSString * tintColor = [dataObject.infoObject stringValueForKey:@"tintColor"];
+    
+    if(tintColor){
+        
+        int r=0,g=0,b=0;
+        float a = 1.0;
+        
+        sscanf([tintColor UTF8String], "#%02x%02x%02x %f",&r,&g,&b,&a);
+        
+        self.view.tintColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a];
+        
+    }
+    
     NSURL * baseURL = [NSURL URLWithString:dataObject.url];
     
     NSURL * url = [NSURL URLWithString:[dataObject.infoObject stringValueForKey:@"html"] relativeToURL:baseURL];
+    
+    NSLog(@"%@",[url absoluteString]);
     
     [_documentController setDocumentURL:url];
     
@@ -57,6 +72,11 @@
         
         [_documentController reloadData];
     }
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
 }
 
 -(void) vtURLDocumentControllerWillLoading:(VTURLDocumentController *)controller{
