@@ -10,4 +10,6 @@
 
 @interface LAHTMLViewController : LAViewController
 
+@property (strong, nonatomic) IBOutlet VTURLDocumentController *documentController;
+
 @end

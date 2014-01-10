@@ -8,6 +8,8 @@
 
 #import "LAHTMLViewController.h"
 
+#import "LADBLatticeObject.h"
+
 @interface LAHTMLViewController ()
 
 @end
@@ -27,6 +29,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    LADBLatticeObject * dataObject = [self.context focusValueForKey:@"latticeObject"];
+    
+    self.title = dataObject.title;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +43,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
