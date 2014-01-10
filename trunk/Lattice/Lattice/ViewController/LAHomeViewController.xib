@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LAHomeViewController">
             <connections>
+                <outlet property="homeController" destination="sDg-iY-4DZ" id="0cQ-xt-l9t"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -15,6 +16,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="30" sectionFooterHeight="1" id="OOk-VA-a5u">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dataSource" destination="sDg-iY-4DZ" id="kb6-wH-oIQ"/>
+                        <outlet property="delegate" destination="sDg-iY-4DZ" id="e7y-4w-qKW"/>
+                    </connections>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VF9-Ar-fqo">
                     <rect key="frame" x="122" y="192" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,5 +41,23 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <customObject id="sDg-iY-4DZ" customClass="LAHomeDataController">
+            <connections>
+                <outlet property="dataSource" destination="uwx-9o-8ZB" id="b63-eS-znT"/>
+                <outlet property="tableView" destination="OOk-VA-a5u" id="Sbl-xQ-sG7"/>
+            </connections>
+        </customObject>
+        <customObject id="uwx-9o-8ZB" customClass="LAHomeDataSource">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="urlKey" value="homeLattice"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="pageSize">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="string" keyPath="dataKey" value="lattices"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="delegate" destination="sDg-iY-4DZ" id="yY9-rH-PlD"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

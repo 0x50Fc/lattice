@@ -7,8 +7,10 @@
 //
 
 #import "LAViewController.h"
+#import "LAHomeDataController.h"
 
 @interface LAHomeViewController : LAViewController
+@property(nonatomic,retain) IBOutlet LAHomeDataController *homeController;
 
 - (IBAction)testAction:(id)sender;
 

@@ -27,12 +27,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.homeController.context = self.context;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [self setHomeController:nil];
+    [super viewDidUnload];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if(![_homeController.dataSource isLoaded] && ![_homeController.dataSource isLoading]){
+        [_homeController reloadData];
+    }
 }
 
 - (IBAction)testAction:(id)sender {

@@ -54,6 +54,8 @@
 		1181E743187FA753004C4425 /* LAWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1181E741187FA753004C4425 /* LAWebViewController.xib */; };
 		1181E747187FA7DA004C4425 /* LAContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181E745187FA7DA004C4425 /* LAContainerViewController.m */; };
 		1181E748187FA7DA004C4425 /* LAContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1181E746187FA7DA004C4425 /* LAContainerViewController.xib */; };
+		8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */; };
+		8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEE31880148800DB0F05 /* LAHomeDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,10 @@
 		1181E744187FA7DA004C4425 /* LAContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAContainerViewController.h; sourceTree = "<group>"; };
 		1181E745187FA7DA004C4425 /* LAContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAContainerViewController.m; sourceTree = "<group>"; };
 		1181E746187FA7DA004C4425 /* LAContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAContainerViewController.xib; sourceTree = "<group>"; };
+		8457FEDE1880146C00DB0F05 /* LAHomeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataController.h; path = Lattice/LAHomeDataController.h; sourceTree = SOURCE_ROOT; };
+		8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataController.m; path = Lattice/LAHomeDataController.m; sourceTree = SOURCE_ROOT; };
+		8457FEE21880148800DB0F05 /* LAHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataSource.h; path = Lattice/LAHomeDataSource.h; sourceTree = SOURCE_ROOT; };
+		8457FEE31880148800DB0F05 /* LAHomeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataSource.m; path = Lattice/LAHomeDataSource.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,8 @@
 		1181E6F2187F9663004C4425 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				8457FEE21880148800DB0F05 /* LAHomeDataSource.h */,
+				8457FEE31880148800DB0F05 /* LAHomeDataSource.m */,
 				113F9E6C187FE36D00E6948C /* LAURLDataSource.h */,
 				113F9E6D187FE36D00E6948C /* LAURLDataSource.m */,
 			);
@@ -260,6 +268,8 @@
 		1181E6F4187F9663004C4425 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8457FEDE1880146C00DB0F05 /* LAHomeDataController.h */,
+				8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */,
 				113F9E6F187FE38B00E6948C /* LAContainerDataController.h */,
 				113F9E70187FE38B00E6948C /* LAContainerDataController.m */,
 				113F9E79187FEDD800E6948C /* LAListContainerDataController.h */,
@@ -445,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				113F9E6E187FE36D00E6948C /* LAURLDataSource.m in Sources */,
+				8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */,
 				113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */,
 				1181E6EC187F9663004C4425 /* main.m in Sources */,
 				1181E732187F9B32004C4425 /* LALatticeService.m in Sources */,
@@ -453,6 +464,7 @@
 				1181E739187FA1E7004C4425 /* NSError+LA.m in Sources */,
 				113F9E7B187FEDD800E6948C /* LAListContainerDataController.m in Sources */,
 				1181E704187F9663004C4425 /* LAShell.m in Sources */,
+				8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */,
 				1181E735187F9BB6004C4425 /* LALatticePullTask.m in Sources */,
 				1181E726187F97B1004C4425 /* LAHomeViewController.m in Sources */,
 				1181E73D187FA743004C4425 /* LAHTMLViewController.m in Sources */,
