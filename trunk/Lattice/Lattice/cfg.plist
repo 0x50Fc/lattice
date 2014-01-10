@@ -82,11 +82,11 @@
 			<key>taskTypes</key>
 			<array>
 				<string>IVTURLDownlinkTask</string>
-                <string>IVTAPIResponseTask</string>
+				<string>IVTAPIResponseTask</string>
 			</array>
 			<key>timeout</key>
 			<integer>20</integer>
-            <key>homeLattice</key>
+			<key>homeLattice</key>
 			<string>http://www.lattice.9vteam.com:82/json/home.json</string>
 		</dict>
 		<dict>
@@ -146,6 +146,13 @@
 			<string>LABrowserViewController</string>
 			<key>view</key>
 			<string>LABrowserViewController</string>
+		</dict>
+		<key>image</key>
+		<dict>
+			<key>class</key>
+			<string>LAImageViewController</string>
+			<key>view</key>
+			<string>LAImageViewController</string>
 		</dict>
 	</dict>
 	<key>url</key>

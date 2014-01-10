@@ -118,7 +118,17 @@
         }
         
     }
-
+    else if([actionName isEqualToString:@"image"]){
+        
+        NSString * url = [element stringValueForKey:@"url"];
+        
+        if(url){
+            
+            [self openUrl:[NSURL URLWithString:@"present://root/image" relativeToURL:self.url queryValues:[NSDictionary dictionaryWithObjectsAndKeys:url,@"url", nil]] animated:YES];
+            
+        }
+        
+    }
 }
 
 @end

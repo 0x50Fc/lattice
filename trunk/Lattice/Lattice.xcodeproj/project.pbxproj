@@ -17,6 +17,9 @@
 		113F9E951880077700E6948C /* ico_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E931880077700E6948C /* ico_close.png */; };
 		113F9E961880077700E6948C /* ico_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E941880077700E6948C /* ico_close@2x.png */; };
 		113F9E9918800BC200E6948C /* LABoardContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E9818800BC200E6948C /* LABoardContainerDataController.m */; };
+		113F9EAB1880209500E6948C /* LAImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9EA71880209500E6948C /* LAImageViewController.m */; };
+		113F9EAC1880209500E6948C /* LAImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9EA91880209500E6948C /* LAImageViewController.xib */; };
+		113F9EAD1880209500E6948C /* LAHomeItemCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9EAA1880209500E6948C /* LAHomeItemCellController.xib */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -85,6 +88,10 @@
 		113F9E941880077700E6948C /* ico_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_close@2x.png"; sourceTree = "<group>"; };
 		113F9E9718800BC200E6948C /* LABoardContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABoardContainerDataController.h; sourceTree = "<group>"; };
 		113F9E9818800BC200E6948C /* LABoardContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABoardContainerDataController.m; sourceTree = "<group>"; };
+		113F9EA71880209500E6948C /* LAImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAImageViewController.m; sourceTree = "<group>"; };
+		113F9EA81880209500E6948C /* LAImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAImageViewController.h; sourceTree = "<group>"; };
+		113F9EA91880209500E6948C /* LAImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAImageViewController.xib; sourceTree = "<group>"; };
+		113F9EAA1880209500E6948C /* LAHomeItemCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAHomeItemCellController.xib; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -289,6 +296,7 @@
 				1181E6F9187F9663004C4425 /* LAViewController.m */,
 				1181E723187F97B1004C4425 /* LAHomeViewController.h */,
 				1181E724187F97B1004C4425 /* LAHomeViewController.m */,
+				113F9EAA1880209500E6948C /* LAHomeItemCellController.xib */,
 				1181E725187F97B1004C4425 /* LAHomeViewController.xib */,
 				1181E73A187FA743004C4425 /* LAHTMLViewController.h */,
 				1181E73B187FA743004C4425 /* LAHTMLViewController.m */,
@@ -303,6 +311,9 @@
 				113F9E8C1880034700E6948C /* LABrowserViewController.h */,
 				113F9E8D1880034700E6948C /* LABrowserViewController.m */,
 				113F9E8E1880034700E6948C /* LABrowserViewController.xib */,
+				113F9EA71880209500E6948C /* LAImageViewController.m */,
+				113F9EA81880209500E6948C /* LAImageViewController.h */,
+				113F9EA91880209500E6948C /* LAImageViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -426,6 +437,7 @@
 			files = (
 				1181E727187F97B1004C4425 /* LAHomeViewController.xib in Resources */,
 				113F9E73187FE87400E6948C /* LAContainerItemViewController.xib in Resources */,
+				113F9EAC1880209500E6948C /* LAImageViewController.xib in Resources */,
 				113F9E901880034700E6948C /* LABrowserViewController.xib in Resources */,
 				1181E6FE187F9663004C4425 /* LAThemeDefault.xib in Resources */,
 				1181E73E187FA743004C4425 /* LAHTMLViewController.xib in Resources */,
@@ -433,6 +445,7 @@
 				1181E6FC187F9663004C4425 /* Theme in Resources */,
 				1181E6F1187F9663004C4425 /* Services in Resources */,
 				1181E6F3187F9663004C4425 /* DataSource in Resources */,
+				113F9EAD1880209500E6948C /* LAHomeItemCellController.xib in Resources */,
 				1181E6EA187F9663004C4425 /* InfoPlist.strings in Resources */,
 				1181E722187F977F004C4425 /* Default-568h@2x.png in Resources */,
 				1181E6F7187F9663004C4425 /* ViewController in Resources */,
@@ -459,6 +472,7 @@
 				113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */,
 				1181E6EC187F9663004C4425 /* main.m in Sources */,
 				1181E732187F9B32004C4425 /* LALatticeService.m in Sources */,
+				113F9EAB1880209500E6948C /* LAImageViewController.m in Sources */,
 				113F9E8F1880034700E6948C /* LABrowserViewController.m in Sources */,
 				1181E742187FA753004C4425 /* LAWebViewController.m in Sources */,
 				1181E739187FA1E7004C4425 /* NSError+LA.m in Sources */,
