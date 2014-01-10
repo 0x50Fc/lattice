@@ -53,6 +53,8 @@
 
 -(VTItemViewController *) vtContainerView:(VTContainerView *)containerView itemViewAtIndex:(NSInteger)index frame:(CGRect)frame{
     
+    [self documentByIndexPath:[NSIndexPath indexPathForRow:index inSection:0] layoutSize:frame.size];
+    
     VTItemViewController * itemViewController = [super vtContainerView:containerView
                                                        itemViewAtIndex:index frame:frame];
     

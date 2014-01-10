@@ -35,9 +35,9 @@
     
     CGFloat columnWidth = size.width / columnCount;
     
-    CGFloat height = 160;
+    CGFloat defaultHeight = 160;
     
-    CGSize layoutSize = CGSizeMake(columnWidth, height);
+    CGSize layoutSize = CGSizeMake(columnWidth, defaultHeight);
    
     if(widthKey && heightKey){
         
@@ -54,9 +54,12 @@
             
             if(_columnIndex < columnCount - 1){
                 _columnIndex = ( _columnIndex + 2 ) % columnCount;
-                return CGSizeMake(columnWidth * 2, 160);
+                return CGSizeMake(columnWidth * 2, defaultHeight);
             }
             
+            _columnIndex = ( _columnIndex + 1 ) % columnCount;
+            
+            return CGSizeMake(columnWidth, defaultHeight);
         }
         
     }
