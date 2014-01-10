@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		113F9E6E187FE36D00E6948C /* LAURLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E6D187FE36D00E6948C /* LAURLDataSource.m */; };
 		113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E70187FE38B00E6948C /* LAContainerDataController.m */; };
+		113F9E73187FE87400E6948C /* LAContainerItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9E72187FE87400E6948C /* LAContainerItemViewController.xib */; };
+		113F9E7B187FEDD800E6948C /* LAListContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E7A187FEDD800E6948C /* LAListContainerDataController.m */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -63,6 +65,9 @@
 		113F9E6D187FE36D00E6948C /* LAURLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAURLDataSource.m; sourceTree = "<group>"; };
 		113F9E6F187FE38B00E6948C /* LAContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAContainerDataController.h; sourceTree = "<group>"; };
 		113F9E70187FE38B00E6948C /* LAContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAContainerDataController.m; sourceTree = "<group>"; };
+		113F9E72187FE87400E6948C /* LAContainerItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAContainerItemViewController.xib; sourceTree = "<group>"; };
+		113F9E79187FEDD800E6948C /* LAListContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAListContainerDataController.h; sourceTree = "<group>"; };
+		113F9E7A187FEDD800E6948C /* LAListContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAListContainerDataController.m; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -242,6 +247,8 @@
 			children = (
 				113F9E6F187FE38B00E6948C /* LAContainerDataController.h */,
 				113F9E70187FE38B00E6948C /* LAContainerDataController.m */,
+				113F9E79187FEDD800E6948C /* LAListContainerDataController.h */,
+				113F9E7A187FEDD800E6948C /* LAListContainerDataController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 				1181E744187FA7DA004C4425 /* LAContainerViewController.h */,
 				1181E745187FA7DA004C4425 /* LAContainerViewController.m */,
 				1181E746187FA7DA004C4425 /* LAContainerViewController.xib */,
+				113F9E72187FE87400E6948C /* LAContainerItemViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1181E727187F97B1004C4425 /* LAHomeViewController.xib in Resources */,
+				113F9E73187FE87400E6948C /* LAContainerItemViewController.xib in Resources */,
 				1181E6FE187F9663004C4425 /* LAThemeDefault.xib in Resources */,
 				1181E73E187FA743004C4425 /* LAHTMLViewController.xib in Resources */,
 				1181E6FC187F9663004C4425 /* Theme in Resources */,
@@ -414,6 +423,7 @@
 				1181E732187F9B32004C4425 /* LALatticeService.m in Sources */,
 				1181E742187FA753004C4425 /* LAWebViewController.m in Sources */,
 				1181E739187FA1E7004C4425 /* NSError+LA.m in Sources */,
+				113F9E7B187FEDD800E6948C /* LAListContainerDataController.m in Sources */,
 				1181E704187F9663004C4425 /* LAShell.m in Sources */,
 				1181E735187F9BB6004C4425 /* LALatticePullTask.m in Sources */,
 				1181E726187F97B1004C4425 /* LAHomeViewController.m in Sources */,

@@ -11,9 +11,7 @@
 @implementation LAContainerDataController
 
 
--(VTItemViewController *) vtContainerView:(VTContainerView *)containerView itemViewAtIndex:(NSInteger)index frame:(CGRect)frame{
-    
-    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+-(VTDOMDocument *) documentByIndexPath:(NSIndexPath *) indexPath layoutSize:(CGSize) layoutSize{
     
     id dataItem = [self dataObjectByIndexPath:indexPath];
     
@@ -40,7 +38,7 @@
             
             [self document:document didLoadedDataObject:dataItem];
             
-            [document.rootElement layout:frame.size];
+            [document.rootElement layout:layoutSize];
             
             [self downloadImagesForElement:document.rootElement];
             
@@ -48,11 +46,22 @@
             
         }
         
-        
-        
+        return document;
     }
     
-    return [super vtContainerView:containerView itemViewAtIndex:index frame:frame];
+    return nil;
+}
+
+-(VTItemViewController *) vtContainerView:(VTContainerView *)containerView itemViewAtIndex:(NSInteger)index frame:(CGRect)frame{
+    
+    VTItemViewController * itemViewController = [super vtContainerView:containerView
+                                                       itemViewAtIndex:index frame:frame];
+    
+    for(VTDOMView * view in [[itemViewController view] searchViewForClass:[VTDOMView class]]){
+        [view setDelegate:self];
+    }
+    
+    return itemViewController;
 }
 
 -(void) loadImagesForElement:(VTDOMElement *) element{

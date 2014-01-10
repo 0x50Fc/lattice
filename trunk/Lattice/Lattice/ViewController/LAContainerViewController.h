@@ -8,6 +8,12 @@
 
 #import "LAViewController.h"
 
-@interface LAContainerViewController : LAViewController
+#import "LAContainerDataController.h"
+
+@interface LAContainerViewController : LAViewController<IVTUplinkTaskDelegate,VTContainerDataControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet VTStatusView * statusView;
+@property (strong, nonatomic) IBOutlet LAContainerDataController *listController;
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import <vTeam/vTeam.h>
 
-@interface LAContainerDataController : VTContainerDataController
+@interface LAContainerDataController : VTContainerDataController<VTDOMViewDelegate>
 
 @property(nonatomic,retain) id dataItem;
 @property(nonatomic,retain) NSBundle * bundle;
@@ -24,6 +24,8 @@
 -(void) downloadImagesForElement:(VTDOMElement *) element;
 
 -(void) loadImagesForElement:(VTDOMElement *) element;
+
+-(VTDOMDocument *) documentByIndexPath:(NSIndexPath *) indexPath layoutSize:(CGSize) layoutSize;
 
 @end
 
