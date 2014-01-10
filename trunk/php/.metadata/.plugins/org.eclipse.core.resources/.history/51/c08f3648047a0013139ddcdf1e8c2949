@@ -34,8 +34,6 @@ class LALatticeService extends Service{
 				$dbContext->update($item);
 			}
 			
-			var_dump($item);
-			
 			return false;
 		}
 		
