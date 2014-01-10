@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * 
+ * @author zhanghailong
+ *
+ */
+class LATask implements ITask{
+	
+	public $token;
+	public function prefix(){
+		return "auth";
+	}
+}
+
+?>

@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * 账号
+ */
+if($library){
+	
+	define("LADB","ladb");
+	
+	require_once "$library/org.hailong.configs/error_code.php";
+	require_once "$library/org.hailong.service/service.php";
+	require_once "$library/org.hailong.ui/ui.php";
+	
+	
+}
+?>

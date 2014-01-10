@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * 
+ * @author zhanghailong
+ *
+ */
+class LALatticeService extends Service{
+	
+	public function handle($taskType,$task){
+		
+		
+		if($task instanceof LALatticeBeaconTask){
+		
+			$context = $this->getContext();
+			$dbContext = $context->dbContext(LADB);
+				
+			
+			$item = $dbContext->querySingleEntity("LALatticeBeacon","beaconKey=".$dbContext->parseValue($task->beaconKey));
+			
+			if(!$item){
+				$item = new LALatticeBeacon();
+				$item->beaconKey = $task->beaconKey;
+				$item->infoObject = $task->infoObject;
+				$item->updateTime = $item->createTime = time();
+				
+				$dbContext->insert($item);
+			}
+			else{
+				
+				$item->infoObject = $task->infoObject;
+				$item->updateTime = time();
+				
+				$dbContext->update($item);
+			}
+			
+			return false;
+		}
+		
+		if($task instanceof LALatticeBeaconQueryTask){
+			
+			$context = $this->getContext();
+			$dbContext = $context->dbContext(LADB);
+				
+			$beaconKeys = preg_split("/\,/i", $string);
+			
+			$rs = $dbContext->queryEntitys("LALatticeBeacon","beaconKey IN ".$dbContext->parseArrayValue($beaconKeys));
+			
+			$results = array();
+			
+			if($rs){
+				
+
+				while($item = $dbContext->nextObject($rs,"LALatticeBeacon")){
+					
+					$rs[$item->beaconKey] = json_decode($item->infoObject,true);
+	
+				}
+				
+				$dbContext->free($rs);
+				
+			}
+			
+			if(count($results) >0){
+			
+				
+				$context->setOutputDataValue("beacon-query-results",$results);
+			}
+			
+			return false;
+		}
+		
+		return true;
+	}
+}
+
+?>

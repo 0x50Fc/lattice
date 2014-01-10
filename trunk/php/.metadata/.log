@@ -314,3 +314,6 @@ Binding(ALT+COMMAND+H,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.php.ui.phpEditorScope,,,system)
+
+!ENTRY org.eclipse.dltk.core 2 0 2014-01-10 22:19:19.668
+!MESSAGE Error decoding problem idenfier "1073741824"

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename source module &apos;config_qdd.php&apos; to &apos;config_lattice.php&apos;&#x0A;- Original element: &apos;(default package)\config_qdd.php&apos;&#x0A;- Renamed element: &apos;(default package)\config_lattice.php&apos;" description="Rename source module &apos;config_qdd.php&apos;" flags="589830" id="org.eclipse.dltk.ui.rename.sourcemodule" input="/&lt;{config_qdd.php" name="config_lattice.php" stamp="1389363978967" version="1.0"/>
+</session>

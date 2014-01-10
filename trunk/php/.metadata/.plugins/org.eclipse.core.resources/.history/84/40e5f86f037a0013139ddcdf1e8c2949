@@ -1,0 +1,470 @@
+<?php
+
+global $library;
+
+if(!$library){
+	$library = "..";
+}
+
+$dbConfig = require "$library/org.hailong.configs/db_default.php";
+
+defaultDBAdapter($dbConfig["type"],$dbConfig["servername"],$dbConfig["database"],$dbConfig["username"],$dbConfig["password"]);
+
+getDefaultDBAdapter()->setCharset($dbConfig["charset"]);
+
+defaultDBContext(new DBContext());
+
+date_default_timezone_set("PRC");
+
+require_once "$library/org.hailong.service/service.php";
+require_once "$library/org.hailong.apple/apple.php";
+require_once "$library/org.hailong.account/account.php";
+require_once "$library/org.hailong.log/log.php";
+require_once "$library/org.hailong.device/device.php";
+require_once "$library/org.hailong.uri/uri.php";
+require_once "$library/org.hailong.app/app.php";
+require_once "$library/org.hailong.authority/authority.php";
+require_once "$library/org.hailong.service.async/async.php";
+require_once "$library/com.9vteam.lattice/lattice.php";
+
+function config_qdd(){
+	
+	global $library;
+	
+	return array(
+		"begin-tasks" => array(
+			
+		),
+		"services" => array(
+			array(
+				"class" => "DBService",
+				"tasks" => array(
+					"DBContextTask"
+				),
+				"config" => array(
+					"entitys"=>array("LALatticeBeacon"
+					)
+				),
+				"createInstance" =>true,
+				"security" => true,
+			),
+			array(
+				"class" => "LALatticeService",
+				"tasks" => array(
+					"LALatticeBeaconTask","LALatticeBeaconQueryTask"
+				),
+				"config" => array(),
+			),
+			array(
+				"class" => "LoginService",
+				"tasks" => array(
+					"LoginTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "URIService",
+				"tasks" => array(
+					"URITask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AccountBindService",
+				"tasks" => array(
+					"AccountBindGetTask","AccountBindTask","AccountTelBindTask","AccountTelUnBindTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AccountInfoService",
+				"tasks" => array(
+					"AccountInfoGetTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AccountService",
+				"tasks" => array(
+					"AccountByIDTask","AccountIDCheckNickTask","AccountIDByBindTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AccountInfoService",
+				"tasks" => array(
+					"AccountInfoGetTask","AccountInfoPutTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AccountRegisterService",
+				"tasks" => array(
+					"AccountRegisterTask","AccountTelRegisterTask","AccountTelVerifyTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "AuthorityValidateService",
+				"tasks" => array(
+					"AuthorityEntityValidateTask","AuthorityRoleValidateTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "CacheService",
+				"tasks" => array(
+					"CacheGetTask","CachePutTask","CacheRemoveTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "LogService",
+				"tasks" => array(
+					"LogTask"
+				),
+				"config" => array(
+					"filter"=>LogLevelError
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "StatisticsService",
+				"tasks" => array(
+					"StatisticsTask"
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "TradeService",
+				"tasks" => array(
+					"TradeCancelTask","TradeConfirmTask","TradeCreateTask","TradeGetProductCountTask"
+					,"TradePaymentTask","TradeRefundCancelTask","TradeRefundCloseTask","TradeRefundTask","TradeShippingTask"
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "ProductService",
+				"tasks" => array(
+					"ProductGetTask","ProductCreateTask","ProductGetForUpdateTask","ProductPublishTask"
+						,"ProductRemoveTask","ProductTradeTask","ProductUnpublishTask","ProductUntradeTask","ProductUpdateTask"
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "LBSService",
+				"tasks" => array(
+					"LBSSourceUpdateTask","LBSSourceRemoveTask","LBSSearchTask","LBSDistanceTask"
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "TimelineService",
+				"tasks" => array(
+					"TimelineCreateTask","TimelineLastCountTask","TimelineMaxTask","TimelineQueryTask","TimelineRemoveTask"
+				),
+				"config" => array(
+					"dbKey"=>"qdd",
+					"dbTable"=>"DBTimeline",
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "ATUserService",
+				"tasks" => array(
+					"ATUserCreateTask","ATUserRemoveTask","ATUserBodyTask","ATUserFetchTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "ClassifyService",
+				"tasks" => array(
+					"ClassifyCreateTask","ClassifyChildTask","ClassifyMatchTask"
+					,"ClassifyParentTask","ClassifyQueryTask","ClassifyRemoveTask","ClassifyUpdateTask"
+					,"ClassifyKeywordAssignTask","ClassifyQueryTopTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "TagService",
+				"tasks" => array(
+					"TagAssignTask","TagTopTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "ConcernService",
+				"tasks" => array(
+					"ConcernBlockCancelTask","ConcernBlockTask","ConcernCancelTask","ConcernCreateTask","ConcernFetchUserTask"
+					,"ConcernCheckTask","ConcernFansCountTask","ConcernFollowCountTask","ConcernIsFollowTask","ConcernFetchFansTask"
+					,"ConcernIsFansTask","ConcernIsMutualTask","ConcernMutualCountTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "TopService",
+				"tasks" => array(
+					"TopItemTask","TopSearchTask","TopRemoveTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "LikedService",
+				"tasks" => array(
+					"LikeRemoveTask","LikeTask","UnLikeTask","LikeQueryTask","LikeCheckTask","LikedCountTask","LikeUserQueryTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "CommentService",
+				"tasks" => array(
+					"CommentCreateTask","CommentRemoveTask","CommentQueryTask","CommentGetTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "BooksService",
+				"tasks" => array(
+					"BooksCreateTask","BooksQueryTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "SinaWeiboLoginService",
+				"tasks" => array(
+					"SinaWeiboLoginTask","SinaWeiboBindTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MessageService",
+				"tasks" => array(
+					"MessageUserAccessTask","MessageUserInvokeTask","AccountBindTask","MessageAccountAuthorizeTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MeetingService",
+				"tasks" => array(
+					"MeetingMemberTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MessageSendService",
+				"tasks" => array(
+					"MessageSendTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MessageRemindService",
+				"tasks" => array(
+					"MessageRemindTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MessageStateService",
+				"tasks" => array(
+					"MessageStateTask","MessageSessionStateTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "MessageQueryService",
+				"tasks" => array(
+					"MessageQueryTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "QQLoginService",
+				"tasks" => array(
+					"QQLoginTask","QQBindTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "CoinService",
+				"tasks" => array(
+					"CoinGetTask","CoinIncomeTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "PrizeService",
+				"tasks" => array(
+					"PrizeBuyTask"
+				),
+				"config" => array(),
+				"security" => true,
+			),
+			array(
+				"class" => "SMSService",
+				"tasks" => array(
+					"SMSSendTask"
+				),
+				"config" => array(
+					"url" => "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/",
+					"method" => "GET",
+					"charset" => "gb2312",
+					"body" => array(
+						"uid"=>"richland",
+						"pwd"=>"123456",
+						"mobile"=>"{tel}",
+						"msg"=>"{body}"
+					)	
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "TriggerService",
+				"tasks" => array(
+					"TriggerTask"
+				),
+				"config" => array(
+					
+					"triggers"=>array(
+					
+						array("name"=>"newuser","do"=>"CoinIncomeTask","data"=>array("coin-coin"=>10,"coin-source"=>"qdd.newuser")),
+						array("name"=>"newuser","do"=>"AppUserPushTask","data"=>array("push-alert"=>"新用户送10积分","push-data"=>array("type"=>"coin","coin"=>10))),
+						array("name"=>"newpublish","do"=>"CoinIncomeTask","data"=>array("coin-coin"=>2,"coin-source"=>"qdd.newpublish")),
+						array("name"=>"newpublish","do"=>"AppUserPushTask","data"=>array("push-alert"=>"发布信息送2积分","push-data"=>array("type"=>"coin","coin"=>2))),
+					
+					)
+						
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "QDDAuthService",
+				"tasks" => array(
+					"QDDRegisterTask","QDDSearchNearUserTask","QDDAuthTask","QDDGetUserTask"
+						,"QDDPublishTask","QDDTimelineTask","QDDUpdateUserTask","QDDLoginTask"
+						,"QDDWeiboLoginTask","QDDQQLoginTask","QDDBooksCreateTask","QDDNearTimelineTask"
+						,"QDDTimelineTask","QDDFollowTask","QDDUnFollowTask","QDDLikeTask","QDDUnLikeTask"
+						,"QDDCommentTask","QDDBooksSearchTask","QDDWeiboBindTask","QDDQQBindTask","QDDUserTimelineTask"
+						,"QDDUserDetailsTask","QDDUserConcernTask","QDDUserFansTask"
+						,"QDDCoinTask","QDDFollowsTask","QDDUserSearchTask","QDDTelVerifyTask","QDDTelBindTask"
+						,"QDDInviteContactTask","QDDNewTimelineTask"
+				),
+			),
+			array(
+				"class" => "QDDBooksService",
+				"tasks" => array(
+					"QDDBooksCreateTask","QDDBooksSearchTask"
+				),
+				"config" => array(),
+			),
+			array(
+				"class" => "QDDLBSService",
+				"tasks" => array(
+					"QDDSearchNearUserTask","QDDNearTimelineTask"
+				),
+				"config" => array("distance"=>2000),
+			),
+			array(
+				"class" => "QDDClassifyService",
+				"tasks" => array(
+					"QDDClassifyTask"
+				),
+			),
+			array(
+				"class" => "QDDTimelineService",
+				"tasks" => array(
+					"QDDTimelineTask","QDDUserTimelineTask","QDDNewTimelineTask"
+				),
+			),
+			array(
+				"class" => "QDDPublishService",
+				"tasks" => array(
+					"QDDGetPublishTask"
+				),
+				"security" => true,
+			),
+			array(
+				"class" => "QDDPublishService",
+				"tasks" => array(
+					"QDDPublishTask"
+				),
+			),
+			array(
+				"class" => "QDDConcernService",
+				"tasks" => array(
+					"QDDFollowTask","QDDUnFollowTask","QDDUserConcernTask","QDDUserFansTask","QDDFollowsTask"
+				),
+			),
+			array(
+				"class" => "QDDTopService",
+				"tasks" => array(
+					"QDDTopTimelineTask"
+				),
+			),
+			array(
+				"class" => "QDDLikeService",
+				"tasks" => array(
+					"QDDLikeTask","QDDUnLikeTask","QDDLikeUserListTask"
+				),
+			),
+			array(
+				"class" => "QDDCommentService",
+				"tasks" => array(
+					"QDDCommentTask","QDDCommentListTask"
+				),
+			),
+			array(
+				"class" => "QDDPrizeService",
+				"tasks" => array(
+					"QDDPrizeSearchTask","QDDPrizeBuyTask","QDDPrizeDetailsTask"
+				),
+			),
+			array(
+				"class" => "QDDMessageService",
+				"tasks" => array(
+					"QDDMessageSendTask","QDDMessageSearchTask"
+				),
+			),
+			array(
+				"class" => "QDDCoinService",
+				"tasks" => array(
+					"QDDCoinTask"
+				),
+			),
+			array(
+				"class" => "QDDInviteService",
+				"tasks" => array(
+					"QDDInviteContactTask","QDDInviteWeiboTask","QDDInviteQQTask"
+				),
+			),
+		),
+	);
+}
+
+?>

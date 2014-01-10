@@ -1,0 +1,60 @@
+<?php
+
+class LALatticeBeacon extends DBEntity{
+	
+	public $bid;
+	public $key;
+	public $infoObject;
+	public $updateTime;
+	public $createTime;
+	
+	public function __construct(){
+		$this->updateTime = time();
+		$this->createTime = time();
+	}
+	
+	public static function primaryKeys(){
+		return array("bid");
+	}
+	
+	public static function autoIncrmentFields(){
+		return array("bid");
+	}
+	
+	public static function tableName(){
+		return "la_lattice_beacon";
+	}
+	
+	public static function tableField($field){
+		return $field;
+	}
+	
+	public static function tableFieldType($field){		
+		if($field == "bid"){
+			return "BIGINT NOT NULL";
+		}
+		if($field == 'key'){
+			return "VARCHAR(256) NULL";
+		}
+		if($field == "infoObject"){
+			return "TEXT NULL";
+		}
+		
+		if($field == "updateTime"){
+			return "INT(11) NULL";
+		}
+		if($field == "createTime"){
+			return "INT(11) NULL";
+		}
+		return "VARCHAR(45) NULL";
+	}
+	
+	
+	public static function indexs(){
+		return array("hl_account_account"=>array(array("field"=>"account","order"=>"asc"))
+			,"hl_account_tel"=>array(array("field"=>"tel","order"=>"asc"))
+			,"hl_account_email"=>array(array("field"=>"email","order"=>"asc")));
+	}
+}
+
+?>

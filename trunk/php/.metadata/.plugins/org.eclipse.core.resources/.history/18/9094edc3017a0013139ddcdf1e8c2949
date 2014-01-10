@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * 
+ * @author zhanghailong
+ *
+ */
+class LALatticeService extends Service{
+	
+	public function handle($taskType,$task){
+		
+		$context = $this->getContext();
+		$dbContext = $context->dbContext(LADB);
+
+		if($task instanceof LALatticeBeaconTask){
+		
+			$item = $dbContext->querySingleEntity("LALatticeBeacon","beaconKey=".$dbContext->parseValue($task->beaconKey));
+			
+			
+			
+			return false;
+		}
+		
+		
+		return true;
+	}
+}
+
+?>

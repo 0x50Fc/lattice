@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * 账号
+ */
+if($library){
+	
+	define("LADB","ladb");
+	
+}
+?>

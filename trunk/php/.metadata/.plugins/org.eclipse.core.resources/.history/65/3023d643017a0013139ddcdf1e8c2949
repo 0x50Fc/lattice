@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * 
+ * @author zhanghailong
+ *
+ */
+class LALatticeBeacon extends LATask{
+
+	public $beaconKey;
+	public $infoObject;
+	
+}
+
+?>

@@ -6,6 +6,11 @@
     <div width="180" height="auto" left="auto" right="26" top="6" layout="flow">
         <label width="100%" height="auto" font="14 bold" color="#333333">{dataItem.title}</label>
         <label width="100%" height="auto" margin-top="6" font="12" color="#666666">{dataItem.author}</label>
+        <label id="buyLabel" width="100%" height="auto" margin-top="12" font="14" color="#007722" align="right">在哪儿买这本书?</label>
+        <div width="100%" height="auto">
+            <a width="auto" height="auto" left="auto" padding="4" corner-radius="3"
+            href="http://read.douban.com/ebook/{dataItem.id}" font="13" color="#3377aa">豆瓣电子书&nbsp;{dataItem.price}</a>
+        </div>
     </div>
     
     <img src="ico17.png" width="8" height="14" left="auto" right="10" width="auto" height="auto" top="auto" bottom="auto"></img>
