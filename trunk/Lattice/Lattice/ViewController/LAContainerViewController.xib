@@ -38,10 +38,12 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="bottomLoadingView" destination="gDq-uE-QiP" id="NMg-Al-GSL"/>
                 <outlet property="containerLayout" destination="NF5-9Q-sxd" id="2OF-Dc-taI"/>
                 <outlet property="containerView" destination="0E9-od-NIm" id="Hl1-Xx-gBr"/>
                 <outlet property="dataSource" destination="VT4-y5-5Kh" id="2KM-Yg-Ihx"/>
                 <outlet property="delegate" destination="-1" id="YDK-B5-QjI"/>
+                <outlet property="topLoadingView" destination="qpA-uw-g9i" id="n64-BG-Zpz"/>
             </connections>
         </customObject>
         <customObject id="NF5-9Q-sxd" customClass="VTFallsContainerLayout">
@@ -64,10 +66,12 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="bottomLoadingView" destination="gDq-uE-QiP" id="JRD-qE-maz"/>
                 <outlet property="containerLayout" destination="AEj-Ce-5jY" id="X5m-gn-L3l"/>
                 <outlet property="containerView" destination="0E9-od-NIm" id="JuV-wz-aUP"/>
                 <outlet property="dataSource" destination="uQP-Cu-p0i" id="XxT-DV-scc"/>
                 <outlet property="delegate" destination="-1" id="FdU-ad-Dac"/>
+                <outlet property="topLoadingView" destination="qpA-uw-g9i" id="l3V-Fd-iaD"/>
             </connections>
         </customObject>
         <customObject id="AEj-Ce-5jY" customClass="VTFallsContainerLayout">
@@ -81,9 +85,108 @@
             </connections>
         </customObject>
         <customObject id="uQP-Cu-p0i" customClass="LAURLDataSource">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="pageSize">
+                    <integer key="value" value="21"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="delegate" destination="bTa-Wu-qW3" id="g5k-7B-WsP"/>
             </connections>
         </customObject>
+        <view contentMode="scaleToFill" id="gDq-uE-QiP" userLabel="bottom loading" customClass="VTDragLoadingView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="松手加载更多..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RQM-GH-mWy">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="上拉刷新..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MPR-Rk-vUA">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="正在加载..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CXw-3g-J8A">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="g1Z-Of-xo9">
+                    <rect key="frame" x="101" y="11" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="downTitleLabel" destination="RQM-GH-mWy" id="6fQ-Gn-YiP"/>
+                <outlet property="loadingTitleLabel" destination="CXw-3g-J8A" id="8Mh-nT-tMi"/>
+                <outlet property="loadingView" destination="g1Z-Of-xo9" id="9Lv-4q-pbt"/>
+                <outlet property="upTitleLabel" destination="MPR-Rk-vUA" id="dEo-6n-HRa"/>
+            </connections>
+        </view>
+        <view contentMode="scaleToFill" id="qpA-uw-g9i" userLabel="top loading" customClass="VTDragLoadingView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="下拉刷新..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kX0-84-ixZ">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="松手开始刷新..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L0a-NN-8cg">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="正在加载..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GDm-Ev-qzj">
+                    <rect key="frame" x="130" y="11" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="最后更新: 今天" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xLa-UO-qGH">
+                    <rect key="frame" x="130" y="32" width="127" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="MfG-Bz-aiv">
+                    <rect key="frame" x="102" y="11" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="downTitleLabel" destination="kX0-84-ixZ" id="TbZ-L0-cHs"/>
+                <outlet property="loadingTitleLabel" destination="GDm-Ev-qzj" id="5Pb-8N-jLO"/>
+                <outlet property="loadingView" destination="MfG-Bz-aiv" id="0y0-Bw-ygK"/>
+                <outlet property="timeLabel" destination="xLa-UO-qGH" id="MLQ-TX-mfV"/>
+                <outlet property="upTitleLabel" destination="L0a-NN-8cg" id="C5G-Yv-X7f"/>
+            </connections>
+        </view>
     </objects>
 </document>

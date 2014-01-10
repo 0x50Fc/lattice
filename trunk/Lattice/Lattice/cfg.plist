@@ -135,6 +135,13 @@
 			<key>view</key>
 			<string>LAContainerViewController</string>
 		</dict>
+		<key>browser</key>
+		<dict>
+			<key>class</key>
+			<string>LABrowserViewController</string>
+			<key>view</key>
+			<string>LABrowserViewController</string>
+		</dict>
 	</dict>
 	<key>url</key>
 	<string>nav:///root/home</string>

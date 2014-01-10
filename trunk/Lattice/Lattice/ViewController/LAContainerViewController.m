@@ -193,5 +193,10 @@
 }
 
 
+-(void) containerDataController:(LAContainerDataController *) dataController doActionElement:(VTDOMElement *) element{
+    
+    [self doElementAction:element];
+    
+}
 
 @end

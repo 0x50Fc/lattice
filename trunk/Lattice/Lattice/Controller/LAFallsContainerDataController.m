@@ -23,8 +23,8 @@
         
         id dataItem = [self dataObjectByIndexPath:indexPath];
         
-        double width = [dataItem doubleValueForKeyPath:@"widthKey"];
-        double height = [dataItem doubleValueForKeyPath:@"heightKey"];
+        double width = [dataItem doubleValueForKeyPath:widthKey];
+        double height = [dataItem doubleValueForKeyPath:heightKey];
         
         if(width && height){
             layoutSize.height = layoutSize.width * height / width;

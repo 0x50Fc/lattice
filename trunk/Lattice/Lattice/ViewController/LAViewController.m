@@ -102,4 +102,23 @@
     
 }
 
+-(void) doElementAction:(VTDOMElement *) element{
+
+    NSString * actionName = [element attributeValueForKey:@"action-name"];
+    
+    if([actionName isEqualToString:@"web"]){
+        
+        NSString * url = [element stringValueForKey:@"url"];
+        NSString * title = [element stringValueForKey:@"title"];
+        
+        if(url){
+            
+            [self openUrl:[NSURL URLWithString:@"present://root/browser" relativeToURL:self.url queryValues:[NSDictionary dictionaryWithObjectsAndKeys:url,@"url",title,@"title", nil]] animated:YES];
+            
+        }
+        
+    }
+
+}
+
 @end

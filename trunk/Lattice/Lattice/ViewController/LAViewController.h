@@ -18,4 +18,6 @@
 
 -(void) openLatticeObject:(LADBLatticeObject *) dataObject;
 
+-(void) doElementAction:(VTDOMElement *) element;
+
 @end
