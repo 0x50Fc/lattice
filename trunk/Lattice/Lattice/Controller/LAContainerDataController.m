@@ -41,7 +41,9 @@
             
             [self downloadImagesForElement:document.rootElement];
             
-            [dataItem setObject:document.rootElement forKey:@"element"];
+            if(document.rootElement){
+                [dataItem setObject:document.rootElement forKey:@"element"];
+            }
             
         }
         
