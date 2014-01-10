@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113F9E6E187FE36D00E6948C /* LAURLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E6D187FE36D00E6948C /* LAURLDataSource.m */; };
+		113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9E70187FE38B00E6948C /* LAContainerDataController.m */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -57,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		113F9E6C187FE36D00E6948C /* LAURLDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAURLDataSource.h; sourceTree = "<group>"; };
+		113F9E6D187FE36D00E6948C /* LAURLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAURLDataSource.m; sourceTree = "<group>"; };
+		113F9E6F187FE38B00E6948C /* LAContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAContainerDataController.h; sourceTree = "<group>"; };
+		113F9E70187FE38B00E6948C /* LAContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAContainerDataController.m; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +231,8 @@
 		1181E6F2187F9663004C4425 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				113F9E6C187FE36D00E6948C /* LAURLDataSource.h */,
+				113F9E6D187FE36D00E6948C /* LAURLDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -232,6 +240,8 @@
 		1181E6F4187F9663004C4425 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				113F9E6F187FE38B00E6948C /* LAContainerDataController.h */,
+				113F9E70187FE38B00E6948C /* LAContainerDataController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113F9E6E187FE36D00E6948C /* LAURLDataSource.m in Sources */,
+				113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */,
 				1181E6EC187F9663004C4425 /* main.m in Sources */,
 				1181E732187F9B32004C4425 /* LALatticeService.m in Sources */,
 				1181E742187FA753004C4425 /* LAWebViewController.m in Sources */,

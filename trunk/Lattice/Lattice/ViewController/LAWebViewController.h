@@ -8,6 +8,9 @@
 
 #import "LAViewController.h"
 
-@interface LAWebViewController : LAViewController
+@interface LAWebViewController : LAViewController<UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet VTStatusView *statusView;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
