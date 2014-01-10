@@ -1,0 +1,9 @@
+
+{
+	"version":"1.0.0",
+	"uri":"container",
+	"containerType":"list",
+	"html":"book.html",
+	"dataUrl":"http://read.douban.com/j/search?start={offset}&limit={pageSize}&query=%E5%B0%8F%E8%AF%B4",
+	"title":"最新图书"
+}

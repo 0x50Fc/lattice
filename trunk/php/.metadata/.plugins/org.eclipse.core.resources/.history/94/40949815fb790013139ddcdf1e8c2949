@@ -1,0 +1,12 @@
+
+<action width="100%" height="140" action-name="book" bookId="{dataItem.id}" type="{dataItem.type}">
+    
+    <img src="{dataItem.cover}" width="90" height="120" top="6" left="15" border-width="1" border-color="#e5e5e5"></img>
+    
+    <div width="180" height="auto" left="auto" right="26" top="6" layout="flow">
+        <label width="100%" height="auto" font="14 bold" color="#333333">{dataItem.title}</label>
+        <label width="100%" height="auto" margin-top="6" font="12" color="#666666">{dataItem.author}</label>
+    </div>
+    
+    <img src="ico17.png" left="auto" right="10" width="auto" height="auto" top="auto" bottom="auto"></img>
+</action>

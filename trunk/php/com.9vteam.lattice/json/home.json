@@ -1,8 +1,9 @@
 
 {
 	"lattices":[
-		{"title":"精选应用","url":"http://www.lattice.9vteam.com:82/json/app.json"},
-		{"title":"宠物选图","url":"http://www.lattice.9vteam.com:82/json/image_cw.json"},
-		{"title":"美丽说","url":"http://www.lattice.9vteam.com:82/json/meilishuo.json"}
+		{"title":"精选应用","url":"http://www.lattice.9vteam.com:82/json/app/app.json"},
+		{"title":"宠物选图","url":"http://www.lattice.9vteam.com:82/json/image/image_cw.json"},
+		{"title":"美丽说","url":"http://www.lattice.9vteam.com:82/json/goods/meilishuo.json"},
+		{"title":"精选阅读","url":"http://www.lattice.9vteam.com:82/json/books/books.json"}
 	]
 }

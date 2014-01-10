@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 9vteam. All rights reserved.
 //
 
-#import "LAViewController.h"
+#import "LALatticeViewController.h"
 
-@interface LAHTMLViewController : LAViewController<VTURLDocumentControllerDelegate>
+@interface LAHTMLViewController : LALatticeViewController<VTURLDocumentControllerDelegate>
 
 @property(nonatomic,strong) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet VTURLDocumentController *documentController;

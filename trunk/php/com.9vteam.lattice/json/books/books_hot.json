@@ -1,0 +1,9 @@
+
+{
+	"version":"1.0.0",
+	"uri":"container",
+	"containerType":"list",
+	"html":"book.html",
+	"dataUrl":"http://read.douban.com/j/search?start={offset}&limit={pageSize}&query=%E7%94%9F%E6%B4%BB",
+	"title":"热门图书"
+}

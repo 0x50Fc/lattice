@@ -52,7 +52,7 @@
 
 - (IBAction)testAction:(id)sender {
     
-    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/image_cw.json"];
+    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/books/books.json"];
     
 }
 

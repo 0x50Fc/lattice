@@ -13,6 +13,7 @@
 @property(nonatomic,retain) id dataItem;
 @property(nonatomic,retain) NSBundle * bundle;
 @property(nonatomic,retain) NSString * html;
+@property(nonatomic,retain) NSURL * documentURL;
 @property(nonatomic,retain) VTDOMStyleSheet * styleSheet;
 @property(nonatomic,retain) IBOutlet VTContainerLayout * containerLayout;
 @property(nonatomic,retain) id infoObject;
