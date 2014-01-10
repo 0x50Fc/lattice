@@ -57,6 +57,7 @@
         if(cell == nil){
             
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell1];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             VTImageView *imageView = [[VTImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
             imageView.tag = 10;
@@ -80,6 +81,7 @@
         if(cell == nil){
             
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell2];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             VTImageView *imageView1 = [[VTImageView alloc] initWithFrame:CGRectMake(0, 0, 160, 60)];
             imageView1.tag = 10;
