@@ -8,5 +8,5 @@
         <label width="100%" height="auto" margin-top="6" font="12" color="#666666">{dataItem.author}</label>
     </div>
     
-    <img src="ico17.png" width="8" height="14" left="auto" right="10" width="auto" height="auto" top="auto" bottom="auto"></img>
+    <img src="ico17.png" left="auto" right="10" width="auto" height="auto" top="auto" bottom="auto"></img>
 </action>

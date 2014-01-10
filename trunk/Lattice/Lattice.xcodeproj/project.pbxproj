@@ -59,6 +59,8 @@
 		1181E743187FA753004C4425 /* LAWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1181E741187FA753004C4425 /* LAWebViewController.xib */; };
 		1181E747187FA7DA004C4425 /* LAContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181E745187FA7DA004C4425 /* LAContainerViewController.m */; };
 		1181E748187FA7DA004C4425 /* LAContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1181E746187FA7DA004C4425 /* LAContainerViewController.xib */; };
+		11D94F5818802C37003B7337 /* LASettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D94F5618802C37003B7337 /* LASettingViewController.m */; };
+		11D94F5918802C37003B7337 /* LASettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D94F5718802C37003B7337 /* LASettingViewController.xib */; };
 		8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */; };
 		8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEE31880148800DB0F05 /* LAHomeDataSource.m */; };
 		84E097CC188021CD00101048 /* LABeaconListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E097C9188021CD00101048 /* LABeaconListViewController.xib */; };
@@ -146,6 +148,9 @@
 		1181E744187FA7DA004C4425 /* LAContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAContainerViewController.h; sourceTree = "<group>"; };
 		1181E745187FA7DA004C4425 /* LAContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAContainerViewController.m; sourceTree = "<group>"; };
 		1181E746187FA7DA004C4425 /* LAContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAContainerViewController.xib; sourceTree = "<group>"; };
+		11D94F5518802C37003B7337 /* LASettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LASettingViewController.h; sourceTree = "<group>"; };
+		11D94F5618802C37003B7337 /* LASettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LASettingViewController.m; sourceTree = "<group>"; };
+		11D94F5718802C37003B7337 /* LASettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LASettingViewController.xib; sourceTree = "<group>"; };
 		8457FEDE1880146C00DB0F05 /* LAHomeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataController.h; path = Lattice/LAHomeDataController.h; sourceTree = SOURCE_ROOT; };
 		8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataController.m; path = Lattice/LAHomeDataController.m; sourceTree = SOURCE_ROOT; };
 		8457FEE21880148800DB0F05 /* LAHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataSource.h; path = Lattice/LAHomeDataSource.h; sourceTree = SOURCE_ROOT; };
@@ -340,6 +345,9 @@
 				113F9EAF1880224600E6948C /* LADocumentViewController.h */,
 				113F9EB01880224700E6948C /* LADocumentViewController.m */,
 				113F9EB11880224700E6948C /* LADocumentViewController.xib */,
+				11D94F5518802C37003B7337 /* LASettingViewController.h */,
+				11D94F5618802C37003B7337 /* LASettingViewController.m */,
+				11D94F5718802C37003B7337 /* LASettingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -482,6 +490,7 @@
 				1181E743187FA753004C4425 /* LAWebViewController.xib in Resources */,
 				1181E700187F9663004C4425 /* Resource in Resources */,
 				1181E6F5187F9663004C4425 /* Controller in Resources */,
+				11D94F5918802C37003B7337 /* LASettingViewController.xib in Resources */,
 				1181E748187FA7DA004C4425 /* LAContainerViewController.xib in Resources */,
 				1181E6EF187F9663004C4425 /* Tasks in Resources */,
 				1181E706187F9663004C4425 /* cfg.plist in Resources */,
@@ -519,6 +528,7 @@
 				1181E72F187F991B004C4425 /* LADBLatticeObject.m in Sources */,
 				1181E747187FA7DA004C4425 /* LAContainerViewController.m in Sources */,
 				1181E6FA187F9663004C4425 /* LAViewController.m in Sources */,
+				11D94F5818802C37003B7337 /* LASettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
