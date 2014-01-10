@@ -65,6 +65,8 @@
                 
                 id resultsData = [respTask resultsData];
                 
+                NSLog(@"%@",resultsData);
+                
                 if([resultsData isKindOfClass:[NSDictionary class]]){
                     
                     NSString * version = [resultsData stringValueForKey:@"version"];

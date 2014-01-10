@@ -60,8 +60,7 @@
 }
 
 -(void) vtURLDocumentControllerWillLoading:(VTURLDocumentController *)controller{
-    
-    
+ 
 }
 
 -(void) vtURLDocumentControllerDidLoaded:(VTURLDocumentController *)controller{

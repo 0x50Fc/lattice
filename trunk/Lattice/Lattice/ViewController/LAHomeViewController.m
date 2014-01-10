@@ -35,4 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)testAction:(id)sender {
+    
+    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/app.json"];
+    
+}
+
 @end

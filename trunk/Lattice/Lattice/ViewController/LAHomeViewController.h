@@ -10,4 +10,6 @@
 
 @interface LAHomeViewController : LAViewController
 
+- (IBAction)testAction:(id)sender;
+
 @end
