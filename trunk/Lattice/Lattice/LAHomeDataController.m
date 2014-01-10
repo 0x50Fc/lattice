@@ -117,7 +117,7 @@
         UILabel *titleLabel = (UILabel *)[cell.contentView viewWithTag:11];
         NSDictionary *item = [self.dataSource dataObjectAtIndex:0];
         
-        imageView.src = [item valueForKey:@"url"];
+        imageView.src = [item valueForKey:@"image"];
         if(![imageView isLoading] && ![imageView isLoaded]){
             [imageView setSource:self];
             [self.context handle:@protocol(IVTImageTask) task:imageView priority:0];
@@ -131,7 +131,7 @@
         UILabel *titleLabel1 = (UILabel *)[cell.contentView viewWithTag:11];
         NSDictionary *item1 = [self.dataSource dataObjectAtIndex:((indexPath.row-1)*2 + 1)];
         
-        imageView1.src = [item1 valueForKey:@"url"];
+        imageView1.src = [item1 valueForKey:@"image"];
         if(![imageView1 isLoading] && ![imageView1 isLoaded]){
             [imageView1 setSource:self];
             [self.context handle:@protocol(IVTImageTask) task:imageView1 priority:0];
@@ -144,7 +144,7 @@
             UILabel *titleLabel2 = (UILabel *)[cell.contentView viewWithTag:21];
             NSDictionary *item2 = [self.dataSource dataObjectAtIndex:((indexPath.row-1)*2 + 1)];
             
-            imageView2.src = [item2 valueForKey:@"url"];
+            imageView2.src = [item2 valueForKey:@"image"];
             if(![imageView2 isLoading] && ![imageView2 isLoaded]){
                 [imageView2 setSource:self];
                 [self.context handle:@protocol(IVTImageTask) task:imageView2 priority:0];
@@ -167,10 +167,10 @@
         
         titleLabel1.text = item1.title;
         
-        if ([self.dataSource count]-1 >= (indexPath.row*2 + 1)) {
+        if ([[(LAHomeDataSource *)(self.dataSource) historyLattices] count]-1 >= (indexPath.row*2 + 1)) {
             VTImageView *imageView2 = (VTImageView *)[cell.contentView viewWithTag:20];
             UILabel *titleLabel2 = (UILabel *)[cell.contentView viewWithTag:21];
-            LADBLatticeObject *item2 = [self.dataSource dataObjectAtIndex:(indexPath.row*2 + 1)];
+            LADBLatticeObject *item2 = [[(LAHomeDataSource *)(self.dataSource) historyLattices] objectAtIndex:(indexPath.row*2 + 1)];
             
             imageView2.src = item2.image;
             if(![imageView2 isLoading] && ![imageView2 isLoaded]){
