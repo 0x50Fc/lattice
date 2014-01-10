@@ -16,7 +16,7 @@
     
     VTDOMDocument * document = [self documentByIndexPath:indexPath layoutSize:CGSizeMake(containerLayout.size.width, MAXFLOAT)];
     
-    return [[document rootElement] contentSize];
+    return [[document rootElement] frame].size;
 }
 
 @end

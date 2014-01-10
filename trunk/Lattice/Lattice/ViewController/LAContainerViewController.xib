@@ -21,8 +21,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0E9-od-NIm" customClass="VTContainerView">
-                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <connections>
                         <outlet property="containerLayout" destination="NF5-9Q-sxd" id="l4F-fg-1wm"/>
                         <outlet property="delegate" destination="7Xz-R0-EIU" id="qkK-YG-M52"/>
@@ -34,7 +34,11 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <customObject id="7Xz-R0-EIU" customClass="LAListContainerDataController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
+            </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="containerLayout" destination="NF5-9Q-sxd" id="2OF-Dc-taI"/>
                 <outlet property="containerView" destination="0E9-od-NIm" id="Hl1-Xx-gBr"/>
                 <outlet property="dataSource" destination="VT4-y5-5Kh" id="2KM-Yg-Ihx"/>
                 <outlet property="delegate" destination="-1" id="YDK-B5-QjI"/>
@@ -56,7 +60,11 @@
             </connections>
         </customObject>
         <customObject id="bTa-Wu-qW3" customClass="LAFallsContainerDataController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
+            </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="containerLayout" destination="AEj-Ce-5jY" id="X5m-gn-L3l"/>
                 <outlet property="containerView" destination="0E9-od-NIm" id="JuV-wz-aUP"/>
                 <outlet property="dataSource" destination="uQP-Cu-p0i" id="XxT-DV-scc"/>
                 <outlet property="delegate" destination="-1" id="FdU-ad-Dac"/>

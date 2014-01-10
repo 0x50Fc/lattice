@@ -14,6 +14,8 @@
 @property(nonatomic,retain) NSBundle * bundle;
 @property(nonatomic,retain) NSString * html;
 @property(nonatomic,retain) VTDOMStyleSheet * styleSheet;
+@property(nonatomic,retain) IBOutlet VTContainerLayout * containerLayout;
+@property(nonatomic,retain) id infoObject;
 
 -(void) document:(VTDOMDocument *) document didLoadedDataObject:(id) dataObject;
 

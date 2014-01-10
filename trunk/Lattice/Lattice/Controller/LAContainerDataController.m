@@ -15,8 +15,7 @@
     
     id dataItem = [self dataObjectByIndexPath:indexPath];
     
-    if([dataItem isKindOfClass:[NSMutableDictionary class]]
-       && [dataItem objectValueForKey:@"__document__"] == nil){
+    if([dataItem isKindOfClass:[NSMutableDictionary class]]){
         
         VTDOMDocument * document = [dataItem valueForKey:@"__document__"];
         
@@ -138,6 +137,11 @@
 
 -(void) vtDOMView:(VTDOMView *)view downloadImagesForView:(UIView *) forView{
     [self downloadImagesForView:forView];
+}
+
+-(void) reloadData{
+    [self.containerView setContainerLayout:_containerLayout];
+    [super reloadData];
 }
 
 @end

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VTItemViewController">
             <connections>
                 <outlet property="dataOutletContainer" destination="3IO-w2-bSJ" id="kMG-49-uCd"/>
+                <outlet property="view" destination="1" id="o9J-Mq-5Xu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,10 +23,10 @@
                 <outletCollection property="dataOutlets" destination="Fs9-O6-OhS" id="ABQ-3j-O8A"/>
             </connections>
         </customObject>
-        <customObject id="Fs9-O6-OhS" customClass="VTDataOutlet">
+        <customObject id="Fs9-O6-OhS" userLabel="dataItem.element" customClass="VTDataOutlet">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="element"/>
-                <userDefinedRuntimeAttribute type="string" keyPath="valueKeyPath" value="element"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="valueKeyPath" value="dataItem.element"/>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outletCollection property="views" destination="1" id="GQS-AO-M9q"/>
