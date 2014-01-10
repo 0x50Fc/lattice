@@ -511,6 +511,8 @@
 		1181E70C187F9663004C4425 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: zoe lee (Y4894PYMR5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -520,6 +522,7 @@
 				INFOPLIST_FILE = "Lattice/Lattice-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6E481739-F00D-4ACC-8FC4-C54266C556F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -527,6 +530,8 @@
 		1181E70D187F9663004C4425 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: zoe lee (Y4894PYMR5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -536,6 +541,7 @@
 				INFOPLIST_FILE = "Lattice/Lattice-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6E481739-F00D-4ACC-8FC4-C54266C556F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
