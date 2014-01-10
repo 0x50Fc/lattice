@@ -7,10 +7,12 @@
 //
 
 #import <vTeam/vTeam.h>
+#import "LAContext.h"
 @import CoreLocation;
 @import CoreBluetooth;
 
 @interface LABeaconDataSource : VTDataSource <CLLocationManagerDelegate, CBPeripheralManagerDelegate>
+@property (nonatomic,assign) IBOutlet id<LAContext> shellDelegate;
 
 - (void)startRangingForBeacons;
 - (void)stopRangingForBeacons;

@@ -30,8 +30,8 @@
 //    uuid_unparse(uu, suuid);
 //    NSString *strUUID = [NSString stringWithCString:suuid encoding:NSASCIIStringEncoding];
     
-    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"0BD2DCDA-7B76-4233-9FBB-F402848BF8FE"];
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:[[UIDevice currentDevice] name]];
+    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:LALatticeUUID];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:LALatticeIdentifier];
 }
 
 - (void)turnOnRanging
@@ -123,7 +123,15 @@
               [filteredBeacons count] > 1 ? @"beacons" : @"beacon");
     }
     
+    NSMutableSet *immediateSet = [NSMutableSet set];
+    for (CLBeacon * _item in filteredBeacons) {
+        if (_item.proximity == CLProximityImmediate) {
+            [immediateSet addObject:[NSString stringWithFormat:@"%@-%@",_item.major,_item.minor]];
+        }
+    }
+    
     self.detectedBeacons = filteredBeacons;
+    [_shellDelegate setDeviceSet:immediateSet];
 }
 
 #pragma mark - Beacon advertising
@@ -136,9 +144,15 @@
     
     time_t t;
     srand((unsigned) time(&t));
+    
+    uint16_t major = rand();
+    uint16_t minor = rand();
+    _shellDelegate.beaconKey = [NSString stringWithFormat:@"%d-%d",major,minor];
+    NSLog(@"%@",_shellDelegate.beaconKey);
+    
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:self.beaconRegion.proximityUUID
-                                                                     major:rand()
-                                                                     minor:rand()
+                                                                     major:major
+                                                                     minor:minor
                                                                 identifier:self.beaconRegion.identifier];
     NSDictionary *beaconPeripheralData = [region peripheralDataWithMeasuredPower:nil];
     [self.peripheralManager startAdvertising:beaconPeripheralData];

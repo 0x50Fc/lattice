@@ -12,6 +12,8 @@
 @implementation LAShell
 
 @synthesize appDBContext = _appDBContext;
+@synthesize beaconKey = _beaconKey;
+@synthesize deviceSet = _deviceSet;
 
 -(id) init{
     if((self = [super initWithConfig:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cfg" ofType:@"plist"]] bundle:nil])){
@@ -26,6 +28,12 @@
     
     [_window setRootViewController:self.rootViewController];
     [_window makeKeyAndVisible];
+    
+    self.beaconKey = @"";
+    self.deviceSet = [NSMutableSet set];
+
+    [_beaconMonitor startRangingForBeacons];
+    [_beaconMonitor startAdvertisingBeacon];
     
     return YES;
 }
@@ -58,6 +66,14 @@
         }
     }
     return _appDBContext;
+}
+
+- (void)setDeviceSet:(NSMutableSet*)deviceSet {
+    if (![_deviceSet isEqualToSet:deviceSet]) {
+        NSLog(@"device change:%@",deviceSet);
+        _deviceSet = deviceSet;
+        [[NSNotificationCenter defaultCenter] postNotificationName:LALatticeObjectChangedNotification object:nil userInfo:nil];
+    }
 }
 
 @end

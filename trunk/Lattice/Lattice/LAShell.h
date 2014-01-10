@@ -10,11 +10,13 @@
 #import <UIKit/UIKit.h>
 #import <vTeam/vTeam.h>
 #import "LAContext.h"
+#import "LABeaconDataSource.h"
 
 @interface LAShell : VTShell<UIApplicationDelegate,LAContext> {
     
 }
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
+@property (strong, nonatomic) IBOutlet LABeaconDataSource *beaconMonitor;
 
 @end
