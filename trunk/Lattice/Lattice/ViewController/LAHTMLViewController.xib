@@ -8,18 +8,25 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LAHTMLViewController">
             <connections>
                 <outlet property="documentController" destination="WNy-IX-azS" id="PO9-2z-dju"/>
+                <outlet property="statusView" destination="1" id="IKq-07-69D"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outletCollection property="controllers" destination="WNy-IX-azS" id="tuN-MU-Gvs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
+        <view contentMode="scaleToFill" id="1" customClass="VTStatusView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="rXg-79-TCm" customClass="VTDOMView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="ALL-87-yJH">
+                            <rect key="frame" x="150" y="259" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="WNy-IX-azS" id="mYO-BR-Xry"/>
@@ -29,11 +36,22 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="statusItems" destination="iUu-hw-KFZ" id="0iS-cp-dy4"/>
+            </connections>
         </view>
         <customObject id="WNy-IX-azS" customClass="VTURLDocumentController">
             <connections>
                 <outlet property="delegate" destination="-1" id="t1x-tl-cOc"/>
                 <outlet property="documentView" destination="rXg-79-TCm" id="SZ6-oO-T5k"/>
+            </connections>
+        </customObject>
+        <customObject id="iUu-hw-KFZ" customClass="VTStatusViewItem">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="status" value="loading"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outletCollection property="views" destination="ALL-87-yJH" id="4Sw-ru-kph"/>
             </connections>
         </customObject>
     </objects>

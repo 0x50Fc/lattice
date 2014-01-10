@@ -8,8 +8,9 @@
 
 #import "LAViewController.h"
 
-@interface LAHTMLViewController : LAViewController
+@interface LAHTMLViewController : LAViewController<VTURLDocumentControllerDelegate>
 
+@property(nonatomic,strong) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet VTURLDocumentController *documentController;
 
 @end

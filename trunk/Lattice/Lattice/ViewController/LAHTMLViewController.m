@@ -34,7 +34,11 @@
     
     self.title = dataObject.title;
     
+    NSURL * baseURL = [NSURL URLWithString:dataObject.url];
     
+    NSURL * url = [NSURL URLWithString:[dataObject.infoObject stringValueForKey:@"html"] relativeToURL:baseURL];
+    
+    [_documentController setDocumentURL:url];
     
 }
 
@@ -42,6 +46,37 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if([_documentController document] == nil){
+        
+        [_statusView setStatus:@"loading"];
+        
+        [_documentController reloadData];
+    }
+}
+
+-(void) vtURLDocumentControllerWillLoading:(VTURLDocumentController *)controller{
+    
+    
+}
+
+-(void) vtURLDocumentControllerDidLoaded:(VTURLDocumentController *)controller{
+    
+    [_statusView setStatus:nil];
+}
+
+-(void) vtURLDocumentController:(VTURLDocumentController *)controller didFailWithError:(NSError *)error{
+    
+    [_statusView setStatus:@"error"];
+    
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:nil message:[error LAMessage] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    
+    [alertView show];
+    
 }
 
 
