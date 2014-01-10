@@ -1,0 +1,12 @@
+
+{
+	"version":"1.0.0",
+	"uri":"container",
+	"containerType":"list",
+	"html":"meilishuo.html",
+	"dataUrl":"http://m.meilishuo.com/aj/getGoods/hot?frame={pageIndex}&page={pageSize}",
+	"dataKey":"tInfo",
+	"dataWidthKey":"pic_width",
+	"dataHeightKey":"pic_height",
+	"title":"最新图书"
+}

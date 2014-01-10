@@ -154,6 +154,13 @@
 			<key>view</key>
 			<string>LAImageViewController</string>
 		</dict>
+		<key>document</key>
+		<dict>
+			<key>class</key>
+			<string>LADocumentViewController</string>
+			<key>view</key>
+			<string>LADocumentViewController</string>
+		</dict>
 	</dict>
 	<key>url</key>
 	<string>root:///root/home</string>

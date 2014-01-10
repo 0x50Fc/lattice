@@ -20,6 +20,8 @@
 		113F9EAB1880209500E6948C /* LAImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9EA71880209500E6948C /* LAImageViewController.m */; };
 		113F9EAC1880209500E6948C /* LAImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9EA91880209500E6948C /* LAImageViewController.xib */; };
 		113F9EAD1880209500E6948C /* LAHomeItemCellController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9EAA1880209500E6948C /* LAHomeItemCellController.xib */; };
+		113F9EB21880224700E6948C /* LADocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113F9EB01880224700E6948C /* LADocumentViewController.m */; };
+		113F9EB31880224700E6948C /* LADocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113F9EB11880224700E6948C /* LADocumentViewController.xib */; };
 		1181E6DC187F9662004C4425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DB187F9662004C4425 /* UIKit.framework */; };
 		1181E6DE187F9662004C4425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DD187F9662004C4425 /* Foundation.framework */; };
 		1181E6E0187F9662004C4425 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1181E6DF187F9662004C4425 /* CoreGraphics.framework */; };
@@ -96,6 +98,9 @@
 		113F9EA81880209500E6948C /* LAImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAImageViewController.h; sourceTree = "<group>"; };
 		113F9EA91880209500E6948C /* LAImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAImageViewController.xib; sourceTree = "<group>"; };
 		113F9EAA1880209500E6948C /* LAHomeItemCellController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAHomeItemCellController.xib; sourceTree = "<group>"; };
+		113F9EAF1880224600E6948C /* LADocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADocumentViewController.h; sourceTree = "<group>"; };
+		113F9EB01880224700E6948C /* LADocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADocumentViewController.m; sourceTree = "<group>"; };
+		113F9EB11880224700E6948C /* LADocumentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LADocumentViewController.xib; sourceTree = "<group>"; };
 		1181E6D8187F9662004C4425 /* Lattice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lattice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181E6DB187F9662004C4425 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1181E6DD187F9662004C4425 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -332,6 +337,9 @@
 				113F9EA71880209500E6948C /* LAImageViewController.m */,
 				113F9EA81880209500E6948C /* LAImageViewController.h */,
 				113F9EA91880209500E6948C /* LAImageViewController.xib */,
+				113F9EAF1880224600E6948C /* LADocumentViewController.h */,
+				113F9EB01880224700E6948C /* LADocumentViewController.m */,
+				113F9EB11880224700E6948C /* LADocumentViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 				1181E6FE187F9663004C4425 /* LAThemeDefault.xib in Resources */,
 				1181E73E187FA743004C4425 /* LAHTMLViewController.xib in Resources */,
 				113F9E961880077700E6948C /* ico_close@2x.png in Resources */,
+				113F9EB31880224700E6948C /* LADocumentViewController.xib in Resources */,
 				1181E6FC187F9663004C4425 /* Theme in Resources */,
 				1181E6F1187F9663004C4425 /* Services in Resources */,
 				1181E6F3187F9663004C4425 /* DataSource in Resources */,
@@ -486,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113F9EB21880224700E6948C /* LADocumentViewController.m in Sources */,
 				113F9E6E187FE36D00E6948C /* LAURLDataSource.m in Sources */,
 				8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */,
 				113F9E71187FE38B00E6948C /* LAContainerDataController.m in Sources */,
@@ -600,7 +610,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: zoe lee (Y4894PYMR5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -610,7 +619,6 @@
 				INFOPLIST_FILE = "Lattice/Lattice-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6E481739-F00D-4ACC-8FC4-C54266C556F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -619,7 +627,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: zoe lee (Y4894PYMR5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -629,7 +636,6 @@
 				INFOPLIST_FILE = "Lattice/Lattice-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6E481739-F00D-4ACC-8FC4-C54266C556F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

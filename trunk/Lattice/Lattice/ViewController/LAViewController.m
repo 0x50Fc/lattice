@@ -129,6 +129,17 @@
         }
         
     }
+    else if([actionName isEqualToString:@"lattice"]){
+        
+        NSString * url = [element stringValueForKey:@"url"];
+        
+        if(url){
+        
+            [self openLatticeUrl:url];
+            
+        }
+        
+    }
 }
 
 @end
