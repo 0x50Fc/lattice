@@ -3,9 +3,9 @@
 return array(
 	"type"=>DB_MYSQL,
 	"servername"=>"127.0.0.1",
-	"database"=>"lattice",
+	"database"=>"books",
 	"username"=>"root",
-	"password"=>"123456",
+	"password"=>"1qazxsw2",
 	"charset"=>"utf8mb4",
 );
 ?>
