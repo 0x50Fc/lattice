@@ -5,46 +5,46 @@
 	</div>
 	<action width="100%" height="160" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 		<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-		<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+		<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 	</action>
-	<div width="100%" height="120" margin-top="6" layout="flow">
+	<div width="100%" height="120" margin-top="6">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 		<action margin-left="6" width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="120" margin-top="6" layout="flow">
+	<div width="100%" height="120" margin-top="6">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 		<action margin-left="6" width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="120" margin-top="6" layout="flow">
+	<div width="100%" height="120" margin-top="6">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 		<action margin-left="6" width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="120" margin-top="6" layout="flow">
+	<div width="100%" height="120" margin-top="6">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 		<action margin-left="6" width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
-			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
+			<label width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
 </div>

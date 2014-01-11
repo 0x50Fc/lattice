@@ -11,7 +11,7 @@
 
 #import "LAContainerDataController.h"
 
-@interface LAHomeViewController : LAViewController
+@interface LAHomeViewController : LAViewController<VTURLDocumentControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet LAContainerDataController *dataController;
 

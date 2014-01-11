@@ -58,5 +58,10 @@
     
 }
 
+-(void) vtURLDocumentController:(VTURLDocumentController *) controller doActionElement:(VTDOMElement *) element{
+    
+    [self doElementAction:element];
+    
+}
 
 @end
