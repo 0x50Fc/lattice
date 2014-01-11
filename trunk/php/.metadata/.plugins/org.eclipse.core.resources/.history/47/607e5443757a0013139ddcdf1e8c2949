@@ -1,4 +1,4 @@
 
-<div width="100%" height="100%" padding="4">
+<div width="100%" height="120" padding="4">
     <img src="{dataItem.locImageLink}" width="100%" height="100%"></img>
 </div>
