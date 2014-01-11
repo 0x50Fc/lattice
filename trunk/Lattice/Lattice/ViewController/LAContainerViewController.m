@@ -64,6 +64,12 @@
     
     NSString * filePath = [self documentFilePath];
     
+    if(![[NSFileManager defaultManager] fileExistsAtPath:[filePath stringByDeletingLastPathComponent]]){
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
+        
+    }
+    
     self.dataController.infoObject = dataObject.infoObject;
     self.dataController.bundle = [NSBundle bundleWithPath:[filePath stringByDeletingLastPathComponent]];
     self.dataController.html = [dataObject.infoObject stringValueForKey:@"html"];
