@@ -123,22 +123,33 @@
     NSDictionary *dict = nil;
     @synchronized(self) {
         if (index < _infoObjects.count) {
-            dict = [[_infoObjects allValues] objectAtIndex:index];
-            self.currentDict = dict;
-            if ([dict stringValueForKey:@"url"] == nil) {
+            NSArray *keys = [_infoObjects allKeys];
+            NSString *key = [keys objectAtIndex:index];
+            if (![[(id<LAContext>)self.context deviceSet] containsObject:key]) {
                 dict = nil;
                 self.currentDict = nil;
             }
             else {
-                if ([_dataObject.url isEqualToString:[dict stringValueForKey:@"url"]]) {
+                dict = [_infoObjects valueForKey:key];
+                self.currentDict = dict;
+                if ([dict stringValueForKey:@"url"] == nil) {
                     dict = nil;
                     self.currentDict = nil;
+                }
+                else {
+                    if ([_dataObject.url isEqualToString:[dict stringValueForKey:@"url"]]) {
+                        dict = nil;
+                        self.currentDict = nil;
+                    }
                 }
             }
         }
     }
     if (dict) {
         BOOL bDoNotDismiss = (index == _infoObjects.count-1);
+        if (_tipView) {
+            [_tipView removeFromSuperview];
+        }
         self.tipView = [[UIView alloc] initWithFrame:CGRectMake(0, -44, self.view.frame.size.width, 44)];
         _tipView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
         UIButton *tipButton = [UIButton buttonWithType:UIButtonTypeCustom];
