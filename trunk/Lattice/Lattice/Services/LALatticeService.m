@@ -74,6 +74,28 @@
         
         return YES;
     }
+    else if(@protocol(ILALatticeBeaconQueryTask) == taskType){
+        
+        id<ILALatticeBeaconQueryTask> latticeTask = (id<ILALatticeBeaconQueryTask>) task;
+        
+        VTAPIRequestTask * httpTask = [[VTAPIRequestTask alloc] init];
+        
+        [httpTask setSource:[task source]];
+        [httpTask setTask:task];
+        [httpTask setTaskType:taskType];
+        
+        [httpTask setApiKey:@"api"];
+        
+        VTHttpFormBody * body = [[VTHttpFormBody alloc] init];
+        
+        [body addItemValue:[[latticeTask beaconKeys] componentsJoinedByString:@","] forKey:@"la-beaconKeys"];
+        
+        [httpTask setBody:body];
+        
+        [self.context handle:@protocol(IVTAPIRequestTask) task:httpTask priority:0];
+        
+        return YES;
+    }
     else if(@protocol(IVTAPIResponseTask) == taskType){
         
         id<IVTAPIResponseTask> respTask = (id<IVTAPIResponseTask>) task;
