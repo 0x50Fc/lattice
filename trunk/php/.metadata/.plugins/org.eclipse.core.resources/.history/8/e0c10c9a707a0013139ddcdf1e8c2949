@@ -8,6 +8,5 @@
 	"dataKey":"items",
 	"dataWidthKey":"width",
 	"dataHeightKey":"height"
-	"title":"宠物选图",
-	"image":"http://www.lattice.9vteam.com:82/json/cw.jpg"
+	"title":"宠物选图"
 }
