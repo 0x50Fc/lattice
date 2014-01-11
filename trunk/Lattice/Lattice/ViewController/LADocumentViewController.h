@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 9vteam. All rights reserved.
 //
 
-#import "LAViewController.h"
+#import "LALatticeViewController.h"
 
 #import "LAURLDataSource.h"
 
-@interface LADocumentViewController : LAViewController<IVTUplinkTaskDelegate,VTDataSourceDelegate>
+@interface LADocumentViewController : LALatticeViewController<IVTUplinkTaskDelegate,VTDataSourceDelegate>
 
 @property (strong, nonatomic) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet VTDocumentController *documentController;

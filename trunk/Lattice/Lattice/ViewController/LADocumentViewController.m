@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    LADBLatticeObject * dataObject = [self.context focusValueForKey:@"latticeObject"];
+    LADBLatticeObject * dataObject = [self dataObject];
     
     self.title = dataObject.title;
     

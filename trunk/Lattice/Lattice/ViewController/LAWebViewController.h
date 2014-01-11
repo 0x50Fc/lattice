@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 9vteam. All rights reserved.
 //
 
-#import "LAViewController.h"
+#import "LALatticeViewController.h"
 
-@interface LAWebViewController : LAViewController<UIWebViewDelegate>
+@interface LAWebViewController : LALatticeViewController<UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet VTStatusView *statusView;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;

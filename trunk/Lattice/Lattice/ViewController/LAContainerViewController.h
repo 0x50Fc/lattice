@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 9vteam. All rights reserved.
 //
 
-#import "LAViewController.h"
+#import "LALatticeViewController.h"
 
 #import "LAContainerDataController.h"
 
-@interface LAContainerViewController : LAViewController<IVTUplinkTaskDelegate,LAContainerDataControllerDelegate>
+@interface LAContainerViewController : LALatticeViewController<IVTUplinkTaskDelegate,LAContainerDataControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet LAContainerDataController *listController;

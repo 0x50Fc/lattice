@@ -35,12 +35,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    LADBLatticeObject * dataObject = [self.context focusValueForKey:@"latticeObject"];
+
     
+    NSURL * baseURL = [NSURL URLWithString:self.dataObject.url];
     
-    NSURL * baseURL = [NSURL URLWithString:dataObject.url];
-    
-    NSURL * url = [NSURL URLWithString:[dataObject.infoObject stringValueForKey:@"html"] relativeToURL:baseURL];
+    NSURL * url = [NSURL URLWithString:[self.dataObject.infoObject stringValueForKey:@"html"] relativeToURL:baseURL];
     
     NSLog(@"%@",[url absoluteString]);
     
