@@ -80,7 +80,11 @@
         
     }
     
-    [_dataSource setValue:[dataObject.infoObject stringValueForKey:@"dataUrl"] forKey:@"url"];
+    NSString * dataUrl = [dataObject.infoObject stringValueForKey:@"dataUrl"];
+    
+    dataUrl = [dataUrl htmlStringByDOMSource:[[NSURL URLWithString:dataObject.url] queryValues] htmlEncoded:NO];
+    
+    [_dataSource setValue:dataUrl forKey:@"url"];
     [_dataSource setValue:[dataObject.infoObject stringValueForKey:@"dataKey"] forKey:@"dataKey"];
     
 }
