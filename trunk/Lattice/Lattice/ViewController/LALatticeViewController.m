@@ -74,7 +74,7 @@
     
     [self.context setFocusValue:self.dataObject forKey:@"latticeObject"];
     
-    [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@/setting",self.alias]] animated:YES];
+    [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@/setting",self.alias] relativeToURL:self.url] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
