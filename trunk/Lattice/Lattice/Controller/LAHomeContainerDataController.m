@@ -10,7 +10,6 @@
 
 @implementation LAHomeContainerDataController
 
-
 -(CGSize) vtContainerLayout:(VTContainerLayout *)containerLayout itemSizeAtIndex:(NSInteger)index{
     
     if(index < [self.headerItemViewControllers count]){
