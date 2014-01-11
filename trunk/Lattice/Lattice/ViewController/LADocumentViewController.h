@@ -10,7 +10,7 @@
 
 #import "LAURLDataSource.h"
 
-@interface LADocumentViewController : LALatticeViewController<IVTUplinkTaskDelegate,VTDataSourceDelegate>
+@interface LADocumentViewController : LALatticeViewController<IVTUplinkTaskDelegate,VTDataSourceDelegate,VTDocumentControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet VTStatusView * statusView;
 @property (strong, nonatomic) IBOutlet VTDocumentController *documentController;
