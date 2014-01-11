@@ -5,6 +5,5 @@
 	"containerType":"list",
 	"html":"book.html",
 	"dataUrl":"http://read.douban.com/j/search?start={offset}&limit={pageSize}&query=%E5%B0%8F%E8%AF%B4",
-	"title":"最新图书",
-	"image":"http://www.lattice.9vteam.com:82/json/tip1.png"
+	"title":"最新图书"
 }
