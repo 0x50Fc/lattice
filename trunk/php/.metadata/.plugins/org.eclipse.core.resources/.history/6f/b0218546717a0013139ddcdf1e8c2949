@@ -6,5 +6,5 @@
 	"html":"book.html",
 	"dataUrl":"http://read.douban.com/j/search?start={offset}&limit={pageSize}&query=%E7%94%9F%E6%B4%BB",
 	"title":"热门图书",
-	"image":"http://www.lattice.9vteam.com:82/json/top1.png"
+	"image":"http://www.lattice.9vteam.com:82/json/tip1.png"
 }

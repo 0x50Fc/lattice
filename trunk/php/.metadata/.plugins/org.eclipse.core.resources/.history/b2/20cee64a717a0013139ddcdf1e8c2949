@@ -4,7 +4,7 @@
 	"uri":"html",
 	"html":"books.html",
 	"title":"精选阅读",
-	"image":"http://www.lattice.9vteam.com:82/json/top1.png",
+	"image":"http://www.lattice.9vteam.com:82/json/tip1.png",
 	"settings":[
 		{"key":"near","title":"附近分享","type":"boolean"},
 		{"key":"classify","title":"分类","type":"select","values":["小说","历史"],"name":"classify"}

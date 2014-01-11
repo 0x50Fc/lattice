@@ -1,10 +1,10 @@
 
 <div width="100%" height="auto" layout="flow">
-	<action width="100%" height="120" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
+	<action width="100%" height="140" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 		<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
 		<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 	</action>
-	<div width="100%" height="80" margin-top="6" layout="flow">
+	<div width="100%" height="100" margin-top="6" layout="flow">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
@@ -14,7 +14,7 @@
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="80" margin-top="6" layout="flow">
+		<div width="100%" height="100" margin-top="6" layout="flow">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
@@ -24,7 +24,7 @@
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="80" margin-top="6" layout="flow">
+		<div width="100%" height="100" margin-top="6" layout="flow">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
@@ -34,7 +34,7 @@
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>
 		</action>
 	</div>
-		<div width="100%" height="80" margin-top="6" layout="flow">
+		<div width="100%" height="100" margin-top="6" layout="flow">
 		<action width="50%-3" height="100%" action-name="lattice" url="http://www.lattice.9vteam.com:82/json/app/app.json">
 			<img width="100%" height="100%" src="http://www.lattice.9vteam.com:82/json/app.jpg" ></img>
 			<label align="center" top="auto" width="100%" height="16" font="12" color="#ffffff" background-color="#000000 0.4">精选应用</label>

@@ -33,7 +33,7 @@
     
     [_documentController setDocumentURL:[NSURL URLWithString:[self.config valueForKey:@"url"]]];
     
-    [_documentController reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +50,7 @@
     [super viewWillAppear:animated];
     
  
+    [_documentController reloadData];
 }
 
 -(void) containerDataController:(LAContainerDataController *) dataController doActionElement:(VTDOMElement *) element{
