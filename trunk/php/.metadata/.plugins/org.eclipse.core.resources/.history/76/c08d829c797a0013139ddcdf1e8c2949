@@ -1,5 +1,5 @@
 
-<action width="100%" height="140" action-name="document?bookId={dataItem.id}" url="http://www.lattice.9vteam.com:82/json/books/book_details.json" >
+<action width="100%" height="140" action-name="document" url="http://www.lattice.9vteam.com:82/json/books/book_details.json?bookId={dataItem.id}" >
     
     <img src="{dataItem.cover}" width="90" height="120" top="6" left="15" border-width="1" border-color="#e5e5e5"></img>
     
