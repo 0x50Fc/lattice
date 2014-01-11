@@ -122,6 +122,8 @@
 			<string>LAHomeViewController</string>
 			<key>title</key>
 			<string>九格聚合</string>
+			<key>url</key>
+			<string>http://www.lattice.9vteam.com:82/json/home.html</string>
 		</dict>
 		<key>html</key>
 		<dict>

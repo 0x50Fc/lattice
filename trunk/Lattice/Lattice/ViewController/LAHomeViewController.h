@@ -9,9 +9,12 @@
 #import "LAViewController.h"
 #import "LAHomeDataController.h"
 
-@interface LAHomeViewController : LAViewController
-@property(nonatomic,retain) IBOutlet LAHomeDataController *homeController;
+#import "LAContainerDataController.h"
 
-- (IBAction)testAction:(id)sender;
+@interface LAHomeViewController : LAViewController
+
+@property (strong, nonatomic) IBOutlet LAContainerDataController *dataController;
+
+@property (strong, nonatomic) IBOutlet VTURLDocumentController *documentController;
 
 @end

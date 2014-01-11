@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -7,8 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LAHomeViewController">
             <connections>
-                <outlet property="homeController" destination="sDg-iY-4DZ" id="0cQ-xt-l9t"/>
+                <outlet property="dataController" destination="bZb-1G-g2a" id="h4T-Em-9cr"/>
+                <outlet property="documentController" destination="ek8-eC-z2n" id="hI8-od-AMl"/>
                 <outlet property="view" destination="1" id="3"/>
+                <outletCollection property="controllers" destination="bZb-1G-g2a" id="tL1-fY-O3H"/>
+                <outletCollection property="controllers" destination="ek8-eC-z2n" id="mNP-qd-VZh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,48 +19,68 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="30" sectionFooterHeight="1" id="OOk-VA-a5u">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pJC-EL-ylA" customClass="VTContainerView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="dataSource" destination="sDg-iY-4DZ" id="kb6-wH-oIQ"/>
-                        <outlet property="delegate" destination="sDg-iY-4DZ" id="e7y-4w-qKW"/>
+                        <outlet property="containerLayout" destination="opE-DO-RnV" id="Sn8-62-emp"/>
+                        <outlet property="delegate" destination="bZb-1G-g2a" id="mRO-eZ-R2c"/>
                     </connections>
-                </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VF9-Ar-fqo">
-                    <rect key="frame" x="122" y="192" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="testAction:" destination="-1" eventType="touchUpInside" id="KgD-fx-mBB"/>
-                    </connections>
-                </button>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <customObject id="sDg-iY-4DZ" customClass="LAHomeDataController">
-            <connections>
-                <outlet property="dataSource" destination="uwx-9o-8ZB" id="b63-eS-znT"/>
-                <outlet property="tableView" destination="OOk-VA-a5u" id="Sbl-xQ-sG7"/>
-            </connections>
-        </customObject>
-        <customObject id="uwx-9o-8ZB" customClass="LAHomeDataSource">
+        <customObject id="bZb-1G-g2a" customClass="LAHomeContainerDataController">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="urlKey" value="homeLattice"/>
-                <userDefinedRuntimeAttribute type="number" keyPath="pageSize">
-                    <integer key="value" value="10"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="string" keyPath="dataKey" value="lattices"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="html" value="lattice.html"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="itemViewNib" value="LAContainerItemViewController"/>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="delegate" destination="sDg-iY-4DZ" id="yY9-rH-PlD"/>
+                <outlet property="containerLayout" destination="opE-DO-RnV" id="slM-Ca-dTA"/>
+                <outlet property="containerView" destination="pJC-EL-ylA" id="E30-gf-jHh"/>
+                <outlet property="dataSource" destination="wJi-uD-Ekb" id="tdJ-Hy-wFY"/>
+                <outlet property="delegate" destination="-1" id="CSc-Vu-YsZ"/>
+                <outletCollection property="headerItemViewControllers" destination="1wY-YW-dyO" id="KVR-ka-p9d"/>
             </connections>
         </customObject>
+        <customObject id="wJi-uD-Ekb" customClass="LAHistoryDataSource">
+            <connections>
+                <outlet property="delegate" destination="bZb-1G-g2a" id="9xq-pa-E35"/>
+            </connections>
+        </customObject>
+        <customObject id="opE-DO-RnV" customClass="VTFlowContainerLayout">
+            <connections>
+                <outlet property="delegate" destination="bZb-1G-g2a" id="JGE-E1-xAR"/>
+            </connections>
+        </customObject>
+        <customObject id="ek8-eC-z2n" customClass="VTURLDocumentController">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Fsu-D8-1n1"/>
+                <outlet property="documentView" destination="Rpl-ZY-obv" id="z7c-Y2-qbC"/>
+            </connections>
+        </customObject>
+        <viewController id="1wY-YW-dyO" customClass="VTItemViewController">
+            <view key="view" contentMode="scaleToFill" id="Rpl-ZY-obv" customClass="VTDOMView">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                <connections>
+                    <outlet property="delegate" destination="ek8-eC-z2n" id="xql-xw-N2g"/>
+                </connections>
+            </view>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="size" keyPath="itemSize">
+                    <size key="value" width="320" height="480"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+        </viewController>
     </objects>
 </document>

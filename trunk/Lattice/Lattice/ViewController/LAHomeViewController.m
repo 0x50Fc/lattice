@@ -28,7 +28,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.homeController.context = self.context;
+   
+    [_dataController reloadData];
+    
+    [_documentController setDocumentURL:[NSURL URLWithString:[self.config valueForKey:@"url"]]];
+    
+    [_documentController reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,22 +43,20 @@
 }
 
 - (void)viewDidUnload {
-    [self setHomeController:nil];
     [super viewDidUnload];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if(![_homeController.dataSource isLoaded] && ![_homeController.dataSource isLoading]){
-        [_homeController reloadData];
-    }
+ 
 }
 
-- (IBAction)testAction:(id)sender {
+-(void) containerDataController:(LAContainerDataController *) dataController doActionElement:(VTDOMElement *) element{
     
-    [self openLatticeUrl:@"http://www.lattice.9vteam.com:82/json/books/books.json"];
+    [self doElementAction:element];
     
 }
+
 
 @end

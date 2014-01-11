@@ -66,6 +66,9 @@
 		11D94F6518803165003B7337 /* ico_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D94F6318803165003B7337 /* ico_setting@2x.png */; };
 		11D94F6A1880D82F003B7337 /* LALatticeBeaconTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D94F691880D82F003B7337 /* LALatticeBeaconTask.m */; };
 		11D94F6D1880D87F003B7337 /* LALatticeBeaconQueryTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D94F6C1880D87F003B7337 /* LALatticeBeaconQueryTask.m */; };
+		11D94F701880E23A003B7337 /* LAHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D94F6F1880E23A003B7337 /* LAHistoryDataSource.m */; };
+		11D94F721880E5B0003B7337 /* lattice.html in Resources */ = {isa = PBXBuildFile; fileRef = 11D94F711880E5B0003B7337 /* lattice.html */; };
+		11D94F751880E9ED003B7337 /* LAHomeContainerDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D94F741880E9ED003B7337 /* LAHomeContainerDataController.m */; };
 		8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */; };
 		8457FEE41880148800DB0F05 /* LAHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457FEE31880148800DB0F05 /* LAHomeDataSource.m */; };
 		84E097CC188021CD00101048 /* LABeaconListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E097C9188021CD00101048 /* LABeaconListViewController.xib */; };
@@ -164,6 +167,11 @@
 		11D94F691880D82F003B7337 /* LALatticeBeaconTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LALatticeBeaconTask.m; sourceTree = "<group>"; };
 		11D94F6B1880D87F003B7337 /* LALatticeBeaconQueryTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LALatticeBeaconQueryTask.h; sourceTree = "<group>"; };
 		11D94F6C1880D87F003B7337 /* LALatticeBeaconQueryTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LALatticeBeaconQueryTask.m; sourceTree = "<group>"; };
+		11D94F6E1880E23A003B7337 /* LAHistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHistoryDataSource.h; sourceTree = "<group>"; };
+		11D94F6F1880E23A003B7337 /* LAHistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHistoryDataSource.m; sourceTree = "<group>"; };
+		11D94F711880E5B0003B7337 /* lattice.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lattice.html; sourceTree = "<group>"; };
+		11D94F731880E9ED003B7337 /* LAHomeContainerDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHomeContainerDataController.h; sourceTree = "<group>"; };
+		11D94F741880E9ED003B7337 /* LAHomeContainerDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHomeContainerDataController.m; sourceTree = "<group>"; };
 		8457FEDE1880146C00DB0F05 /* LAHomeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataController.h; path = Lattice/LAHomeDataController.h; sourceTree = SOURCE_ROOT; };
 		8457FEDF1880146C00DB0F05 /* LAHomeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomeDataController.m; path = Lattice/LAHomeDataController.m; sourceTree = SOURCE_ROOT; };
 		8457FEE21880148800DB0F05 /* LAHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomeDataSource.h; path = Lattice/LAHomeDataSource.h; sourceTree = SOURCE_ROOT; };
@@ -308,6 +316,8 @@
 				8457FEE31880148800DB0F05 /* LAHomeDataSource.m */,
 				113F9E6C187FE36D00E6948C /* LAURLDataSource.h */,
 				113F9E6D187FE36D00E6948C /* LAURLDataSource.m */,
+				11D94F6E1880E23A003B7337 /* LAHistoryDataSource.h */,
+				11D94F6F1880E23A003B7337 /* LAHistoryDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -327,6 +337,8 @@
 				113F9E87187FF6DA00E6948C /* LAFallsContainerDataController.m */,
 				113F9E9718800BC200E6948C /* LABoardContainerDataController.h */,
 				113F9E9818800BC200E6948C /* LABoardContainerDataController.m */,
+				11D94F731880E9ED003B7337 /* LAHomeContainerDataController.h */,
+				11D94F741880E9ED003B7337 /* LAHomeContainerDataController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +405,7 @@
 		1181E72A187F989E004C4425 /* Htmls */ = {
 			isa = PBXGroup;
 			children = (
+				11D94F711880E5B0003B7337 /* lattice.html */,
 			);
 			name = Htmls;
 			sourceTree = "<group>";
@@ -515,6 +528,7 @@
 				11D94F5918802C37003B7337 /* LASettingViewController.xib in Resources */,
 				1181E748187FA7DA004C4425 /* LAContainerViewController.xib in Resources */,
 				1181E6EF187F9663004C4425 /* Tasks in Resources */,
+				11D94F721880E5B0003B7337 /* lattice.html in Resources */,
 				11D94F6418803165003B7337 /* ico_setting.png in Resources */,
 				1181E706187F9663004C4425 /* cfg.plist in Resources */,
 			);
@@ -541,6 +555,7 @@
 				1181E704187F9663004C4425 /* LAShell.m in Sources */,
 				84E097CD188021CD00101048 /* LABeaconListViewController.m in Sources */,
 				8457FEE01880146C00DB0F05 /* LAHomeDataController.m in Sources */,
+				11D94F701880E23A003B7337 /* LAHistoryDataSource.m in Sources */,
 				84E097D4188021DA00101048 /* LABeaconDataSource.m in Sources */,
 				1181E735187F9BB6004C4425 /* LALatticePullTask.m in Sources */,
 				11D94F5F188030F5003B7337 /* LALatticeViewController.m in Sources */,
@@ -555,6 +570,7 @@
 				11D94F6D1880D87F003B7337 /* LALatticeBeaconQueryTask.m in Sources */,
 				1181E6FA187F9663004C4425 /* LAViewController.m in Sources */,
 				11D94F5818802C37003B7337 /* LASettingViewController.m in Sources */,
+				11D94F751880E9ED003B7337 /* LAHomeContainerDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
