@@ -42,7 +42,8 @@ function config_lattice(){
 					"DBContextTask"
 				),
 				"config" => array(
-					"entitys"=>array("LALatticeBeacon")
+					"entitys"=>array("LALatticeBeacon"
+					)
 				),
 				"createInstance" =>true,
 				"security" => true,

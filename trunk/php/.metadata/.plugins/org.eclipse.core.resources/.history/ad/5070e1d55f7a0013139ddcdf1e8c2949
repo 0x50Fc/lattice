@@ -51,7 +51,7 @@ class LALatticeBeacon extends DBEntity{
 	
 	
 	public static function indexs(){
-		return array("beaconKey"=>array(array("field"=>"beaconKey","order"=>"asc")));
+		return array("beaconKey"=>array(array("key"=>"beaconKey","order"=>"asc")));
 	}
 }
 
