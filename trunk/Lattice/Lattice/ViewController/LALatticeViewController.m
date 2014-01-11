@@ -56,11 +56,9 @@
     
     if([self.dataObject.infoObject objectValueForKey:@"settings"]){
         
-        VTBarButtonItem * buttonItem = [[VTBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ico_setting.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(doAction:)];
+        UIBarButtonItem * buttonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ico_setting.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(doSettingAction:)];
         
-        [buttonItem setActionName:@"url"];
-        [buttonItem setUserInfo:[NSString stringWithFormat:@"%@/setting",self.alias]];
-        
+       
         self.navigationItem.rightBarButtonItem = buttonItem;
         
     }
@@ -70,6 +68,13 @@
 -(void) dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:LALatticeObjectChangedNotification object:nil];
     [_beaconQueryTask setDelegate:nil];
+}
+
+-(void) doSettingAction:(id) sender{
+    
+    [self.context setFocusValue:self.dataObject forKey:@"latticeObject"];
+    
+    [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@/setting",self.alias]] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
