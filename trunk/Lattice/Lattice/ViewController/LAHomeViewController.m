@@ -64,4 +64,16 @@
     
 }
 
+-(void) vtURLDocumentControllerDidLoaded:(VTURLDocumentController *) controller{
+    
+    [controller.documentView setAllowAutoLayout:NO];
+    
+    CGRect frame = [controller.documentView.element frame];
+    
+    [_itemViewController setItemSize:frame.size];
+    
+    [_dataController.containerView reloadData];
+    
+}
+
 @end

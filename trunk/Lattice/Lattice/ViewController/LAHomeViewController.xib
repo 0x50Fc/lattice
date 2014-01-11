@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="dataController" destination="bZb-1G-g2a" id="h4T-Em-9cr"/>
                 <outlet property="documentController" destination="ek8-eC-z2n" id="hI8-od-AMl"/>
+                <outlet property="itemViewController" destination="1wY-YW-dyO" id="luZ-Yw-n9C"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outletCollection property="controllers" destination="bZb-1G-g2a" id="tL1-fY-O3H"/>
                 <outletCollection property="controllers" destination="ek8-eC-z2n" id="mNP-qd-VZh"/>

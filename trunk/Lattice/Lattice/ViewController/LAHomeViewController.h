@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet LAContainerDataController *dataController;
 
 @property (strong, nonatomic) IBOutlet VTURLDocumentController *documentController;
+@property (strong, nonatomic) IBOutlet VTItemViewController *itemViewController;
 
 @end
