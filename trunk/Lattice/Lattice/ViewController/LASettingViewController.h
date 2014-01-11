@@ -8,6 +8,8 @@
 
 #import "LAViewController.h"
 
-@interface LASettingViewController : LAViewController
+@interface LASettingViewController : LAViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
