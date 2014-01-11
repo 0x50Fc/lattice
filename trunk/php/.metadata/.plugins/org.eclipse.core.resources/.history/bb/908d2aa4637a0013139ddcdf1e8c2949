@@ -3,7 +3,7 @@
 	"lattices":[
 		{"title":"精选应用","url":"http://www.lattice.9vteam.com:82/json/app/app.json","image":"http://www.lattice.9vteam.com:82/json/app.jpg"},
 		{"title":"宠物选图","url":"http://www.lattice.9vteam.com:82/json/image/image_cw.json","image":"http://www.lattice.9vteam.com:82/json/cw.jpg"},
-		{"title":"美丽说","url":"http://www.lattice.9vteam.com:82/json/goods/meilishuo.json","image":"http://www.lattice.9vteam.com:82/json/meilishuo.jpg"},
-		{"title":"精选阅读","url":"http://www.lattice.9vteam.com:82/json/books/books.json","image":"http://www.hailong.org/books/top1.png"}
+		{"title":"美丽说","url":"http://www.lattice.9vteam.com:82/json/goods/meilishuo.json"},
+		{"title":"精选阅读","url":"http://www.lattice.9vteam.com:82/json/books/books.json"}
 	]
 }
