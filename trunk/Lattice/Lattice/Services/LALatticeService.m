@@ -67,7 +67,13 @@
         
         [body addItemValue:@"LALatticeBeaconTask" forKey:@"taskType"];
         [body addItemValue:[latticeTask beaconKey] forKey:@"la-beaconKey"];
-        [body addItemValue:[VTJSON encodeObject:[latticeTask infoObject]] forKey:@"la-infoObject"];
+        
+        NSMutableDictionary * data = [NSMutableDictionary dictionaryWithCapacity:2];
+        
+        [data setValue:[latticeTask url] forKey:@"url"];
+        [data setValue:[latticeTask infoObject] forKey:@"infoObject"];
+        
+        [body addItemValue:[VTJSON encodeObject:data] forKey:@"la-infoObject"];
         
         [httpTask setBody:body];
         

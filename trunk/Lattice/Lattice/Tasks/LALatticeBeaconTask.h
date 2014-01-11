@@ -12,6 +12,7 @@
 
 @property(nonatomic,retain) NSString * beaconKey;
 @property(nonatomic,retain) id infoObject;
+@property(nonatomic,retain) NSString * url;
 
 @end
 

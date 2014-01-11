@@ -12,5 +12,6 @@
 
 @synthesize beaconKey = _beaconKey;
 @synthesize infoObject = _infoObject;
+@synthesize url = _url;
 
 @end
