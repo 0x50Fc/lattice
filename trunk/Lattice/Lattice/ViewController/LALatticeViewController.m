@@ -28,11 +28,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    LADBLatticeObject * dataObject = [self.context focusValueForKey:@"latticeObject"];
+    if(_dataObject == nil){
+        self.dataObject = [self.context focusValueForKey:@"latticeObject"];
+    }
     
-    self.title = dataObject.title;
+    self.title = self.dataObject.title;
     
-    NSString * tintColor = [dataObject.infoObject stringValueForKey:@"tintColor"];
+    NSString * tintColor = [self.dataObject.infoObject stringValueForKey:@"tintColor"];
     
     if(tintColor){
         
@@ -45,7 +47,7 @@
         
     }
     
-    if([dataObject.infoObject objectValueForKey:@"settings"]){
+    if([self.dataObject.infoObject objectValueForKey:@"settings"]){
         
         VTBarButtonItem * buttonItem = [[VTBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ico_setting.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(doAction:)];
         

@@ -10,4 +10,6 @@
 
 @interface LALatticeViewController : LAViewController
 
+@property(nonatomic,retain) LADBLatticeObject * dataObject;
+
 @end
