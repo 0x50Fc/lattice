@@ -1,0 +1,12 @@
+
+{
+	"version":"1.0.0",
+	"uri":"html",
+	"html":"books.html",
+	"title":"精选阅读",
+	"image":"http://www.lattice.9vteam.com:82/json/top1.png",
+	"settings":[
+		{"key":"near","title":"附近分享","type":"boolean","defaultValue":true},
+		{"key":"classify","title":"分类","type":"select","values":["小说","历史"],"name":"classify","defaultValue":"小说"}
+	]
+}

@@ -4,5 +4,6 @@
 	"uri":"document",
 	"html":"book_details.html",
 	"title":"图书详情",
-	"dataUrl":"http://read.douban.com/j/ebook/{bookId}/"
+	"dataUrl":"http://read.douban.com/j/ebook/{bookId}/",
+	"image":"http://www.lattice.9vteam.com:82/json/top1.png"
 }
