@@ -75,6 +75,8 @@
 			</array>
 			<key>timeout</key>
 			<integer>20</integer>
+			<key>api</key>
+			<string>http://service.lattice.9vteam.com:82/api.php?config=config_lattice</string>
 		</dict>
 		<dict>
 			<key>class</key>
@@ -95,6 +97,8 @@
 			<key>taskTypes</key>
 			<array>
 				<string>ILALatticePullTask</string>
+				<string>ILALatticeBeaconQueryTask</string>
+				<string>ILALatticeBeaconTask</string>
 				<string>IVTAPIResponseTask</string>
 			</array>
 			<key>timeout</key>

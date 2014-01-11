@@ -10,6 +10,10 @@
 
 #import "LALatticePullTask.h"
 
+#import "LALatticeBeaconTask.h"
+
+#import "LALatticeBeaconQueryTask.h"
+
 @implementation LALatticeService
 
 -(BOOL) handle:(Protocol *)taskType task:(id<IVTTask>)task priority:(NSInteger)priority{
@@ -42,6 +46,29 @@
         [httpTask setTaskType:taskType];
         
         [httpTask setApiUrl:[latticeTask url]];
+        
+        [self.context handle:@protocol(IVTAPIRequestTask) task:httpTask priority:0];
+        
+        return YES;
+    }
+    else if(@protocol(ILALatticeBeaconTask) == taskType){
+        
+        id<ILALatticeBeaconTask> latticeTask = (id<ILALatticeBeaconTask>) task;
+        
+        VTAPIRequestTask * httpTask = [[VTAPIRequestTask alloc] init];
+        
+        [httpTask setSource:[task source]];
+        [httpTask setTask:task];
+        [httpTask setTaskType:taskType];
+        
+        [httpTask setApiKey:@"api"];
+        
+        VTHttpFormBody * body = [[VTHttpFormBody alloc] init];
+        
+        [body addItemValue:[latticeTask beaconKey] forKey:@"la-beaconKey"];
+        [body addItemValue:[VTJSON encodeObject:[latticeTask infoObject]] forKey:@"la-infoObject"];
+        
+        [httpTask setBody:body];
         
         [self.context handle:@protocol(IVTAPIRequestTask) task:httpTask priority:0];
         
@@ -112,7 +139,61 @@
             
             return YES;
         }
-        
+        else if([respTask taskType] == @protocol(ILALatticeBeaconTask)){
+            
+            if([respTask error]){
+                [self vtUplinkTask:[respTask task] didFailWithError:[respTask error] forTaskType:[respTask taskType]];
+            }
+            else{
+                
+                int errorCode = [[respTask resultsData] intValueForKey:@"error-code"];
+                NSString * error = [[respTask resultsData] stringValueForKey:@"error" defaultValue:@""];
+                
+                if(errorCode){
+                    
+                    
+                    [self vtUplinkTask:[respTask task] didFailWithError:[NSError errorWithDomain:NSStringFromClass([self class]) code:errorCode userInfo:[NSDictionary dictionaryWithObject:error forKey:NSLocalizedDescriptionKey]] forTaskType:[respTask taskType]];
+                    
+                }
+                else{
+                    
+                    [self vtUplinkTask:[respTask task] didSuccessResults:[respTask resultsData] forTaskType:[respTask taskType]];
+                }
+                
+            }
+            
+            return YES;
+        }
+        else if([respTask taskType] == @protocol(ILALatticeBeaconQueryTask)){
+            
+            if([respTask error]){
+                [self vtUplinkTask:[respTask task] didFailWithError:[respTask error] forTaskType:[respTask taskType]];
+            }
+            else{
+                
+                int errorCode = [[respTask resultsData] intValueForKey:@"error-code"];
+                NSString * error = [[respTask resultsData] stringValueForKey:@"error" defaultValue:@""];
+                
+                if(errorCode){
+                    
+                    [self vtUplinkTask:[respTask task] didFailWithError:[NSError errorWithDomain:NSStringFromClass([self class]) code:errorCode userInfo:[NSDictionary dictionaryWithObject:error forKey:NSLocalizedDescriptionKey]] forTaskType:[respTask taskType]];
+                    
+                }
+                else{
+                    
+                    NSDictionary * infoObjects = [[respTask resultsData] dictionaryForKey:@"beacon-query-results"];
+                    
+                    id<ILALatticeBeaconQueryTask> latticeTask = (id<ILALatticeBeaconQueryTask>) [respTask task];
+                    
+                    [latticeTask setInfoObjects:infoObjects];
+                    
+                    [self vtUplinkTask:[respTask task] didSuccessResults:[respTask resultsData] forTaskType:[respTask taskType]];
+                }
+                
+            }
+            
+            return YES;
+        }
     }
     
     return NO;
