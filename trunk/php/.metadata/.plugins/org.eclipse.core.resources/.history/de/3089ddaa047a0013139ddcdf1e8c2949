@@ -44,7 +44,7 @@ class LALatticeService extends Service{
 			$context = $this->getContext();
 			$dbContext = $context->dbContext(LADB);
 				
-			$beaconKeys = preg_split("/\,/i", $task->beaconKeys);
+			$beaconKeys = preg_split("/\,/i", $string);
 			
 			$rs = $dbContext->queryEntitys("LALatticeBeacon","beaconKey IN ".$dbContext->parseArrayValue($beaconKeys));
 			
