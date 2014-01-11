@@ -25,9 +25,6 @@ class LALatticeService extends Service{
 				$item->updateTime = $item->createTime = time();
 				
 				$dbContext->insert($item);
-				
-				echo $dbContext->getLastSql();
-				
 			}
 			else{
 				
