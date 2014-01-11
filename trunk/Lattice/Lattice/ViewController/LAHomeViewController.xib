@@ -57,6 +57,9 @@
             </connections>
         </customObject>
         <customObject id="ek8-eC-z2n" customClass="VTURLDocumentController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="allowPreloadCached" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="delegate" destination="-1" id="Fsu-D8-1n1"/>
                 <outlet property="documentView" destination="Rpl-ZY-obv" id="z7c-Y2-qbC"/>
