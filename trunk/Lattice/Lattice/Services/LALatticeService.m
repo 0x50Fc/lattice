@@ -65,6 +65,7 @@
         
         VTHttpFormBody * body = [[VTHttpFormBody alloc] init];
         
+        [body addItemValue:@"LALatticeBeaconTask" forKey:@"taskType"];
         [body addItemValue:[latticeTask beaconKey] forKey:@"la-beaconKey"];
         [body addItemValue:[VTJSON encodeObject:[latticeTask infoObject]] forKey:@"la-infoObject"];
         
@@ -88,6 +89,7 @@
         
         VTHttpFormBody * body = [[VTHttpFormBody alloc] init];
         
+        [body addItemValue:@"LALatticeBeaconQueryTask" forKey:@"taskType"];
         [body addItemValue:[[latticeTask beaconKeys] componentsJoinedByString:@","] forKey:@"la-beaconKeys"];
         
         [httpTask setBody:body];
@@ -203,7 +205,7 @@
                 }
                 else{
                     
-                    NSDictionary * infoObjects = [[respTask resultsData] dictionaryForKey:@"beacon-query-results"];
+                    NSDictionary * infoObjects = [[respTask resultsData] dictionaryValueForKey:@"beacon-query-results"];
                     
                     id<ILALatticeBeaconQueryTask> latticeTask = (id<ILALatticeBeaconQueryTask>) [respTask task];
                     

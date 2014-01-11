@@ -7,9 +7,11 @@
 //
 
 #import "LALatticeViewController.h"
+#import "LALatticeBeaconTask.h"
+#import "LALatticeBeaconQueryTask.h"
 
 @interface LALatticeViewController ()
-
+@property(nonatomic,retain) LALatticeBeaconQueryTask * beaconQueryTask;
 @end
 
 @implementation LALatticeViewController
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dbChangedAction:) name:LALatticeObjectChangedNotification object:nil];
     
     if(_dataObject == nil){
         self.dataObject = [self.context focusValueForKey:@"latticeObject"];
@@ -57,13 +61,45 @@
         self.navigationItem.rightBarButtonItem = buttonItem;
         
     }
-    
+    [self uploadInfoObject];
+}
+
+-(void) dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:LALatticeObjectChangedNotification object:nil];
+    [_beaconQueryTask setDelegate:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)uploadInfoObject {
+    if(_dataObject == nil){
+        self.dataObject = [self.context focusValueForKey:@"latticeObject"];
+    }
+    LALatticeBeaconTask * beaconTask = [[LALatticeBeaconTask alloc] init];
+    [beaconTask setBeaconKey:[(id<LAContext>)self.context beaconKey]];
+    [beaconTask setInfoObject:_dataObject.infoObject];
+    [self.context handle:@protocol(ILALatticeBeaconTask) task:beaconTask priority:0];
+}
+
+-(void) dbChangedAction:(NSNotification *) notification{
+    [_beaconQueryTask setDelegate:nil];
+    self.beaconQueryTask = [[LALatticeBeaconQueryTask alloc] init];
+    [_beaconQueryTask setBeaconKeys:[[(id<LAContext>)self.context deviceSet] allObjects]];
+    [_beaconQueryTask setDelegate:self];
+    [self.context handle:@protocol(ILALatticeBeaconQueryTask) task:_beaconQueryTask priority:0];
+}
+
+-(void) vtUploadTask:(id<IVTUplinkTask>) uplinkTask didSuccessResults:(id) results forTaskType:(Protocol *) taskType {
+    self.infoObjects = [(id<ILALatticeBeaconQueryTask>)uplinkTask infoObjects];
+    [(id<ILALatticeBeaconQueryTask>)uplinkTask setDelegate:nil];
+}
+
+-(void) vtUploadTask:(id<IVTUplinkTask>) uplinkTask didFailWithError:(NSError *)error forTaskType:(Protocol *)taskType {
+    [(id<ILALatticeBeaconQueryTask>)uplinkTask setDelegate:nil];
 }
 
 @end

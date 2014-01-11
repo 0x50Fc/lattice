@@ -8,8 +8,12 @@
 
 #import "LAViewController.h"
 
-@interface LALatticeViewController : LAViewController
+@interface LALatticeViewController : LAViewController <IVTUplinkTaskDelegate>
 
 @property(nonatomic,retain) LADBLatticeObject * dataObject;
+
+@property(nonatomic,retain) NSDictionary * infoObjects;
+
+- (void)uploadInfoObject;
 
 @end
